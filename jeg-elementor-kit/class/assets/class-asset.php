@@ -30,6 +30,11 @@ class Asset {
 	private $endpoint = 'jkit-ajax-request';
 
 	/**
+	 * Loaded Scripts
+	 */
+	private $loaded_scripts = array();
+
+	/**
 	 * Block ajax prefix
 	 *
 	 * @var string
@@ -57,11 +62,14 @@ class Asset {
 		add_filter( 'wp_handle_upload', array( $this, 'svg_upload_handler' ) );
 
 		add_action( 'admin_init', array( $this, 'remove_form_control' ), 99 );
+		add_action( 'admin_enqueue_scripts', array( $this, 'load_admin_assets' ), 98 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'load_frontend_scripts' ), 98 );
 		add_action( 'elementor/frontend/after_register_styles', array( $this, 'load_frontend_assets' ), 98 );
 		add_action( 'elementor/editor/after_enqueue_styles', array( $this, 'load_editor_assets' ) );
 		add_action( 'elementor/editor/after_enqueue_scripts', array( $this, 'load_editor_scripts' ) );
 		add_action( 'elementor/element/parse_css', array( $this, 'add_post_css' ), 10, 2 );
+
+		add_action( 'elementor/frontend/before_get_builder_content', array( $this, 'enqueue_conditional_scripts' ), 99, 2 );
 
 		/** Add portfolio gallery css custom handler */
 		add_action( 'elementor/element/parse_css', array( $this, 'add_portfolio_gallery_css' ), 10, 2 );
@@ -126,6 +134,7 @@ class Asset {
 	 * Load editor assets
 	 */
 	public function load_editor_assets() {
+		wp_enqueue_style( 'tippy', JEG_ELEMENTOR_KIT_URL . '/assets/js/tippy/tippy.css', array(), '6.3.7' );
 		wp_enqueue_style( 'jkit-elements-editor', JEG_ELEMENTOR_KIT_URL . '/assets/css/admin/editor.css', array(), JEG_ELEMENTOR_KIT_VERSION );
 	}
 
@@ -133,7 +142,19 @@ class Asset {
 	 * Load editor scripts
 	 */
 	public function load_editor_scripts() {
-		wp_enqueue_script( 'jkit-elements-editor', JEG_ELEMENTOR_KIT_URL . '/assets/js/elementor/editor-support.js', array( 'jquery' ), JEG_ELEMENTOR_KIT_VERSION, true );
+		wp_register_script( 'popper', JEG_ELEMENTOR_KIT_URL . '/assets/js/popper/popper.min.js', array(), '2.11.8', true );
+		wp_register_script( 'tippy', JEG_ELEMENTOR_KIT_URL . '/assets/js/tippy/tippy-bundle.umd.min.js', array( 'popper' ), '6.3.7', true );
+		wp_enqueue_script( 'jkit-elements-editor', JEG_ELEMENTOR_KIT_URL . '/assets/js/elementor/editor-support.js', array( 'jquery', 'tippy' ), JEG_ELEMENTOR_KIT_VERSION, true );
+
+		wp_localize_script(
+			'jkit-elements-editor',
+			'jkit_editor',
+			array(
+				// 'pro_banner' => file_get_contents( JEG_ELEMENTOR_KIT_DIR . '/assets/img/admin/jkit-pro-banner.svg' ),
+				// 'pro_banner' => JEG_ELEMENTOR_KIT_URL . '/assets/img/admin/jkit-pro-banner.svg',
+				'pro_banner' => pro_banner_popup_template(),
+			)
+		);
 	}
 
 	/**
@@ -147,6 +168,23 @@ class Asset {
 		if ( \Elementor\Plugin::$instance->preview->is_preview_mode() ) {
 			wp_enqueue_style( 'jkit-icons' );
 		}
+
+		/** Banner Asset */
+		wp_register_style( 'jkit-notice-banner', JEG_ELEMENTOR_KIT_URL . '/assets/css/admin/notice-banner.css', array(), JEG_ELEMENTOR_KIT_VERSION );
+
+		/** WP Admin Bar Style in Frontend */
+		if ( is_admin_bar_showing() ) {
+			wp_enqueue_style( 'jkit-admin', JEG_ELEMENTOR_KIT_URL . '/assets/css/admin/admin.css', array(), JEG_ELEMENTOR_KIT_VERSION );
+		}
+	}
+
+	/**
+	 * Load Admin Styles
+	 * 
+	 * @return void
+	 */
+	public function load_admin_assets() {
+		wp_enqueue_style( 'jkit-admin', JEG_ELEMENTOR_KIT_URL . '/assets/css/admin/admin.css', array(), JEG_ELEMENTOR_KIT_VERSION );
 	}
 
 	/**
@@ -188,6 +226,9 @@ class Asset {
 		wp_localize_script( 'jkit-element-pagination', 'jkit_element_pagination_option', $this->localize_script() );
 
 		wp_add_inline_script( 'elementor-frontend', $this->ajax_url() );
+
+		/** Banner Asset */
+		wp_register_script( 'jkit-notice-banner', JEG_ELEMENTOR_KIT_URL . '/assets/js/admin/notice-banner.js', array( 'jquery' ), JEG_ELEMENTOR_KIT_VERSION, true );
 	}
 
 	/**
@@ -270,15 +311,15 @@ class Asset {
 
 		for ( $i = 0; $i < $count_breakpoints - 1; $i++ ) {
 			if ( isset( $settings[ 'sg_setting_column_responsive_' . $breakpoints[ $i ]['key'] ]['size'] ) && ! empty( $settings[ 'sg_setting_column_responsive_' . $breakpoints[ $i ]['key'] ]['size'] ) ) {
-				$column = $settings[ 'sg_setting_column_responsive_' . $breakpoints[ $i ]['key'] ];
-				$css   .= '@media (min-width: ' . strval( $breakpoints[ $i + 1 ]['value'] + 1 ) . 'px) and (max-width: ' . strval( $breakpoints[ $i ]['value'] ) . 'px) {' . $selector . ':nth-child(' . strval( $column['size'] ) . 'n) { border-right-width:0; } }';
+				$column  = $settings[ 'sg_setting_column_responsive_' . $breakpoints[ $i ]['key'] ];
+				$css    .= '@media (min-width: ' . strval( $breakpoints[ $i + 1 ]['value'] + 1 ) . 'px) and (max-width: ' . strval( $breakpoints[ $i ]['value'] ) . 'px) {' . $selector . ':nth-child(' . strval( $column['size'] ) . 'n) { border-right-width:0; } }';
 			}
 		}
 
 		if ( $count_breakpoints > 0 ) {
 			if ( isset( $settings[ 'sg_setting_column_responsive_' . $breakpoints[ $count_breakpoints - 1 ]['key'] ]['size'] ) && ! empty( $settings[ 'sg_setting_column_responsive_' . $breakpoints[ $count_breakpoints - 1 ]['key'] ]['size'] ) ) {
-				$column = $settings[ 'sg_setting_column_responsive_' . $breakpoints[ $count_breakpoints - 1 ]['key'] ];
-				$css   .= '@media (max-width: ' . strval( $breakpoints[ $count_breakpoints - 1 ]['value'] ) . 'px) {' . $selector . ':nth-child(' . strval( $column['size'] ) . 'n) { border-right-width:0; } }';
+				$column  = $settings[ 'sg_setting_column_responsive_' . $breakpoints[ $count_breakpoints - 1 ]['key'] ];
+				$css    .= '@media (max-width: ' . strval( $breakpoints[ $count_breakpoints - 1 ]['value'] ) . 'px) {' . $selector . ':nth-child(' . strval( $column['size'] ) . 'n) { border-right-width:0; } }';
 			}
 		}
 
@@ -372,9 +413,9 @@ class Asset {
 		}
 
 		if ( $track_color || $track_bg ) {
-			$color    = $track_color ? $track_color : $color_default;
-			$bg_color = $track_bg ? $track_bg : $bg_color_default;
-			$css     .= $selector . ' { background: -o-repeating-linear-gradient(left, ' . $color . ', ' . $color . ' 4px, ' . $bg_color . ' 4px, ' . $bg_color . ' 8px); background: repeating-linear-gradient(to right, ' . $color . ', ' . $color . ' 4px, ' . $bg_color . ' 4px, ' . $bg_color . ' 8px); }';
+			$color     = $track_color ? $track_color : $color_default;
+			$bg_color  = $track_bg ? $track_bg : $bg_color_default;
+			$css      .= $selector . ' { background: -o-repeating-linear-gradient(left, ' . $color . ', ' . $color . ' 4px, ' . $bg_color . ' 4px, ' . $bg_color . ' 8px); background: repeating-linear-gradient(to right, ' . $color . ', ' . $color . ' 4px, ' . $bg_color . ' 4px, ' . $bg_color . ' 8px); }';
 		}
 
 		foreach ( $breakpoints as $breakpoint ) {
@@ -390,9 +431,9 @@ class Asset {
 			}
 
 			if ( $track_color || $track_bg ) {
-				$color    = $track_color ? $track_color : $color_default;
-				$bg_color = $track_bg ? $track_bg : $bg_color_default;
-				$css     .= '@media (max-width: ' . strval( $breakpoint['value'] ) . 'px) {' . $selector . ' { background: -o-repeating-linear-gradient(left, ' . $color . ', ' . $color . ' 4px, ' . $bg_color . ' 4px, ' . $bg_color . ' 8px); background: repeating-linear-gradient(to right, ' . $color . ', ' . $color . ' 4px, ' . $bg_color . ' 4px, ' . $bg_color . ' 8px); } }';
+				$color     = $track_color ? $track_color : $color_default;
+				$bg_color  = $track_bg ? $track_bg : $bg_color_default;
+				$css      .= '@media (max-width: ' . strval( $breakpoint['value'] ) . 'px) {' . $selector . ' { background: -o-repeating-linear-gradient(left, ' . $color . ', ' . $color . ' 4px, ' . $bg_color . ' 4px, ' . $bg_color . ' 8px); background: repeating-linear-gradient(to right, ' . $color . ', ' . $color . ' 4px, ' . $bg_color . ' 4px, ' . $bg_color . ' 8px); } }';
 			}
 		}
 
@@ -477,8 +518,8 @@ class Asset {
 				$css .= '@media (min-width: ' . strval( $breakpoints[0]['value'] + 1 ) . 'px) {' . $selector . ' .feature-list-items .feature-list-item .feature-list-content-box { margin-left: 0 !important; margin-right: 0 !important;  margin-bottom: 0 !important; } }';
 			}
 		} elseif ( 'left' === $position ) {
-				$css .= $selector . ' .feature-list-items .feature-list-item { text-align: left; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; display: -webkit-box; display: -ms-flexbox; display: flex; }';
-				$css .= $selector . ' .feature-list-items .feature-list-item .feature-list-content-box { margin-right: 0 !important; margin-top: 0 !important;  margin-bottom: 0 !important; }';
+			$css .= $selector . ' .feature-list-items .feature-list-item { text-align: left; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; display: -webkit-box; display: -ms-flexbox; display: flex; }';
+			$css .= $selector . ' .feature-list-items .feature-list-item .feature-list-content-box { margin-right: 0 !important; margin-top: 0 !important;  margin-bottom: 0 !important; }';
 		} elseif ( 'right' === $position ) {
 			$css .= $selector . ' .feature-list-items .feature-list-item { text-align: right; -webkit-box-orient: horizontal; -webkit-box-direction: reverse; -ms-flex-direction: row-reverse; flex-direction: row-reverse; display: -webkit-box; display: -ms-flexbox; display: flex; }';
 			$css .= $selector . ' .feature-list-items .feature-list-item .feature-list-content-box { margin-left: 0 !important; margin-top: 0 !important;  margin-bottom: 0 !important; }';
@@ -547,7 +588,7 @@ class Asset {
 					$css .= '@media (min-width: ' . strval( $breakpoints[0]['value'] + 1 ) . 'px) {' . $selector . ' .feature-list-items .feature-list-item:not(:last-child):before { height: calc(100% + 8px); } }';
 				}
 			} elseif ( 'left' === $position ) {
-					$css .= $selector . ' .feature-list-items .feature-list-item .connector { left: 0; right: calc(100% - ' . $offset . $icon_size['unit'] . '); }';
+				$css .= $selector . ' .feature-list-items .feature-list-item .connector { left: 0; right: calc(100% - ' . $offset . $icon_size['unit'] . '); }';
 			} elseif ( 'right' === $position ) {
 				$css .= $selector . ' .feature-list-items .feature-list-item .connector { left: calc(100% - ' . $offset . $icon_size['unit'] . '); right: 0; }';
 			} else {
@@ -634,9 +675,9 @@ class Asset {
 						$css .= '@media (min-width: ' . strval( $breakpoints[0]['value'] + 1 ) . 'px) {' . $selector . ' .feature-list-items.connector-type-modern .feature-list-item:after { left: 5px; } }';
 					}
 				} elseif ( 'right' === $position ) {
-						$css .= $selector . ' .feature-list-items.connector-type-modern .feature-list-item { padding-right: 50px; }';
-						$css .= $selector . ' .feature-list-items.connector-type-modern .feature-list-item:before { right: 0 }';
-						$css .= $selector . ' .feature-list-items.connector-type-modern .feature-list-item:after { right: 5px }';
+					$css .= $selector . ' .feature-list-items.connector-type-modern .feature-list-item { padding-right: 50px; }';
+					$css .= $selector . ' .feature-list-items.connector-type-modern .feature-list-item:before { right: 0 }';
+					$css .= $selector . ' .feature-list-items.connector-type-modern .feature-list-item:after { right: 5px }';
 				} else {
 					$css .= $selector . ' .feature-list-items.connector-type-modern .feature-list-item { padding-left: 50px; }';
 					$css .= $selector . ' .feature-list-items.connector-type-modern .feature-list-item:before { left: 0; }';
@@ -715,8 +756,8 @@ class Asset {
 				$css .= '@media (min-width: ' . strval( $breakpoints[0]['value'] + 1 ) . 'px) {' . $selector . ' .jkit-icon-box-wrapper .icon-box.icon-box-header { margin-right: unset; margin-left: unset; } }';
 			}
 		} elseif ( 'left' === $position ) {
-				$css .= $selector . ' .jkit-icon-box-wrapper { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; flex-direction: row; }';
-				$css .= $selector . ' .jkit-icon-box-wrapper .icon-box.icon-box-header { margin-right: 15px; margin-left: unset; }';
+			$css .= $selector . ' .jkit-icon-box-wrapper { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; flex-direction: row; }';
+			$css .= $selector . ' .jkit-icon-box-wrapper .icon-box.icon-box-header { margin-right: 15px; margin-left: unset; }';
 		} elseif ( 'right' === $position ) {
 			$css .= $selector . ' .jkit-icon-box-wrapper { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: reverse; -ms-flex-direction: row-reverse; flex-direction: row-reverse; }';
 			$css .= $selector . ' .jkit-icon-box-wrapper .icon-box.icon-box-header { margin-left: 15px; margin-right: unset; }';
@@ -1048,8 +1089,8 @@ class Asset {
 
 		if ( $count_breakpoints > 0 ) {
 			if ( isset( $settings[ 'sg_setting_column_responsive_' . $breakpoints[ $count_breakpoints - 1 ]['key'] ]['size'] ) && ! empty( $settings[ 'sg_setting_column_responsive_' . $breakpoints[ $count_breakpoints - 1 ]['key'] ]['size'] ) ) {
-				$columns = $settings[ 'sg_setting_column_responsive_' . $breakpoints[ $count_breakpoints - 1 ]['key'] ];
-				$css    .= '@media (max-width: ' . strval( $breakpoints[ $count_breakpoints - 1 ]['value'] ) . 'px) {' . $selector . ' .gallery-items .gallery-item-wrap { width: calc(100% / ' . strval( intval( $columns['size'] ) ) . ' ); float: left; } }';
+				$columns  = $settings[ 'sg_setting_column_responsive_' . $breakpoints[ $count_breakpoints - 1 ]['key'] ];
+				$css     .= '@media (max-width: ' . strval( $breakpoints[ $count_breakpoints - 1 ]['value'] ) . 'px) {' . $selector . ' .gallery-items .gallery-item-wrap { width: calc(100% / ' . strval( intval( $columns['size'] ) ) . ' ); float: left; } }';
 			}
 		}
 
@@ -1264,5 +1305,58 @@ class Asset {
 		}
 
 		return $file;
+	}
+
+	/**
+	 * Check loaded scripts
+	 * 
+	 * @param string $handle Script handle.
+	 * 
+	 * @return bool
+	 */
+	private function script_loaded( $handle ) {
+		if ( isset( $this->loaded_scripts[ $handle ] ) && $this->loaded_scripts[ $handle ] ) {
+			return true;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Summary of get_element_settings
+	 * 
+	 * @param mixed $elements_data
+	 * @param mixed $option_id
+	 * @param string|array $type
+	 * 
+	 * @return mixed
+	 */
+	private function get_element_settings( $elements_data, $option_id, $type = null ) {
+		foreach ( $elements_data as $element_data ) {
+			if ( isset( $element_data['settings'][ $option_id ] ) ) {
+				return $element_data['settings'][ $option_id ];
+			}
+
+			if ( ! empty( $element_data['elements'] ) ) {
+				return $this->get_element_settings( $element_data['elements'], $option_id, $type );
+			}
+		}
+
+		return null;
+	}
+
+	/**
+	 * Load Conditional Scripts
+	 * 
+	 * @param \Elementor\Core\Base\Document $document Document instance.
+	 * @param mixed $_is_excerpt Whether the excerpt is being called.
+	 */
+	public function enqueue_conditional_scripts( $document, $_is_excerpt ) {
+		$elements_data = $document->get_elements_data();
+
+		if ( ! $this->script_loaded( 'jkit-sticky-element' ) && $this->get_element_settings( $elements_data, 'jkit_sticky_section' ) === 'enabled' ) {
+			$this->loaded_scripts['jkit-sticky-element'] = true;
+			wp_enqueue_script( 'jkit-sticky-element' );
+		}
 	}
 }
