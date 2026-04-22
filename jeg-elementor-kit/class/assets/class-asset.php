@@ -1323,22 +1323,30 @@ class Asset {
 	}
 
 	/**
-	 * Summary of get_element_settings
-	 * 
-	 * @param mixed $elements_data
-	 * @param mixed $option_id
-	 * @param string|array $type
-	 * 
-	 * @return mixed
+	 * Find an option value inside an elements tree (DFS recursive).
+	 *
+	 * @param array $elements_data Elements array to search.
+	 * @param string $option_id Option key to find.
+	 * @param string|array $type (unused) kept for compatibility.
+	 *
+	 * @return mixed|null
 	 */
 	private function get_element_settings( $elements_data, $option_id, $type = null ) {
+		if ( empty( $elements_data ) || ! is_array( $elements_data ) ) {
+			return null;
+		}
+
 		foreach ( $elements_data as $element_data ) {
-			if ( isset( $element_data['settings'][ $option_id ] ) ) {
+			if ( isset( $element_data['settings'] ) && array_key_exists( $option_id, $element_data['settings'] ) ) {
 				return $element_data['settings'][ $option_id ];
 			}
 
-			if ( ! empty( $element_data['elements'] ) ) {
-				return $this->get_element_settings( $element_data['elements'], $option_id, $type );
+			if ( isset( $element_data['elements'] ) && ! empty( $element_data['elements'] ) && is_array( $element_data['elements'] ) ) {
+				$value = $this->get_element_settings( $element_data['elements'], $option_id, $type );
+
+				if ( null !== $value ) {
+					return $value;
+				}
 			}
 		}
 
