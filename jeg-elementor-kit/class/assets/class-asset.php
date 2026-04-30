@@ -155,6 +155,29 @@ class Asset {
 				'pro_banner' => pro_banner_popup_template(),
 			)
 		);
+
+		$editor_asset = JEG_ELEMENTOR_KIT_DIR . '/lib/dependencies/editor.asset.php';
+		$include      = include $editor_asset;
+		wp_enqueue_script(
+			'jkit-editor-bundle',
+			JEG_ELEMENTOR_KIT_URL . '/assets/js/editor/editor.js',
+			isset( $include['dependencies'] ) ? $include['dependencies'] : array(),
+			JEG_ELEMENTOR_KIT_VERSION,
+			true
+		);
+
+		// Minimal mirror for shared helpers used in editor bundle
+		$freemius_cfg  = \Jeg\Elementor_Kit\Integrations\Freemius::instance()->get_pricing_config();
+		$editor_option = array(
+			'freemius'    => array( 'pricing' => $freemius_cfg ),
+			'pricingPlan' => jkit_get_pricing_plan(),
+			'imgDir'      => JEG_ELEMENTOR_KIT_URL . '/assets/img/',
+		);
+		$mirror_js     = $this->build_window_assignment_js( 'jkit.options.freemius', $editor_option['freemius'], false )
+			. $this->build_window_assignment_js( 'jkit.pricingPlan', $editor_option['pricingPlan'], false )
+			. $this->build_window_assignment_js( 'jkit.imgDir', $editor_option['imgDir'], false );
+		wp_add_inline_script( 'jkit-editor-bundle', $mirror_js );
+
 	}
 
 	/**
@@ -175,6 +198,21 @@ class Asset {
 		/** WP Admin Bar Style in Frontend */
 		if ( is_admin_bar_showing() ) {
 			wp_enqueue_style( 'jkit-admin', JEG_ELEMENTOR_KIT_URL . '/assets/css/admin/admin.css', array(), JEG_ELEMENTOR_KIT_VERSION );
+			wp_enqueue_script( 'jkit-admin', JEG_ELEMENTOR_KIT_URL . '/assets/js/admin/admin.js', array( 'lodash', 'react', 'react-dom', 'regenerator-runtime', 'wp-api-fetch', 'wp-data', 'wp-hooks', 'wp-i18n', 'wp-notices' ), JEG_ELEMENTOR_KIT_VERSION, true );
+
+			// Provide minimal dashboard options to frontend/admin-bar pages so shared modules
+			// (like the pricing modal) can access Freemius pricing config and related values.
+			$freemius_cfg    = \Jeg\Elementor_Kit\Integrations\Freemius::instance()->get_pricing_config();
+			$frontend_option = array(
+				'freemius'    => array( 'pricing' => $freemius_cfg ),
+				'pricingPlan' => jkit_get_pricing_plan(),
+				'imgDir'      => JEG_ELEMENTOR_KIT_URL . '/assets/img/',
+			);
+			// Mirror only the minimal fields into a safer namespace to avoid collisions
+			$mirror_js = $this->build_window_assignment_js( 'jkit.options.freemius', $frontend_option['freemius'], false )
+				. $this->build_window_assignment_js( 'jkit.pricingPlan', $frontend_option['pricingPlan'], false )
+				. $this->build_window_assignment_js( 'jkit.imgDir', $frontend_option['imgDir'], false );
+			wp_add_inline_script( 'jkit-admin', $mirror_js );
 		}
 	}
 
@@ -185,6 +223,19 @@ class Asset {
 	 */
 	public function load_admin_assets() {
 		wp_enqueue_style( 'jkit-admin', JEG_ELEMENTOR_KIT_URL . '/assets/css/admin/admin.css', array(), JEG_ELEMENTOR_KIT_VERSION );
+		wp_enqueue_script( 'jkit-admin', JEG_ELEMENTOR_KIT_URL . '/assets/js/admin/admin.js', array( 'lodash', 'react', 'react-dom', 'regenerator-runtime', 'wp-api-fetch', 'wp-data', 'wp-hooks', 'wp-i18n', 'wp-notices' ), JEG_ELEMENTOR_KIT_VERSION, true );
+
+		// Ensure JkitDashboardOption is available on admin pages where `jkit-admin` is loaded.
+		$admin_option = array(
+			'freemius'    => array( 'pricing' => \Jeg\Elementor_Kit\Integrations\Freemius::instance()->get_pricing_config() ),
+			'pricingPlan' => jkit_get_pricing_plan(),
+			'imgDir'      => JEG_ELEMENTOR_KIT_URL . '/assets/img/',
+		);
+		// Mirror only the minimal fields into a safer namespace to avoid collisions
+		$mirror_js = $this->build_window_assignment_js( 'jkit.options.freemius', $admin_option['freemius'], false )
+			. $this->build_window_assignment_js( 'jkit.pricingPlan', $admin_option['pricingPlan'], false )
+			. $this->build_window_assignment_js( 'jkit.imgDir', $admin_option['imgDir'], false );
+		wp_add_inline_script( 'jkit-admin', $mirror_js );
 	}
 
 	/**
@@ -253,6 +304,37 @@ class Asset {
 		$option['element_prefix'] = self::$element_ajax_prefix;
 
 		return $option;
+	}
+
+	/**
+	 * Build JavaScript snippet that ensures a nested `window` path exists and assigns a value.
+	 *
+	 * @param string $path Dot-separated path, e.g. 'jkit.options.freemius'.
+	 * @param mixed  $value Value to assign. If $raw is false the value is JSON-encoded.
+	 * @param bool   $raw  Whether $value is a raw JS expression (true) or PHP value to json_encode (false).
+	 *
+	 * @return string JS code string (immediately-invoked function expression).
+	 */
+	protected function build_window_assignment_js( $path, $value, $raw = false ) {
+		$parts = explode( '.', $path );
+		$acc   = 'window';
+		$lines = array();
+		foreach ( $parts as $part ) {
+			$acc     .= "['" . esc_js( $part ) . "']";
+			$lines[]  = "if ( typeof {$acc} === 'undefined' ) { {$acc} = {}; }";
+		}
+
+		if ( $raw ) {
+			$val = $value;
+		} else {
+			$val = wp_json_encode( $value );
+		}
+
+		$assign = "{$acc} = {$val};";
+
+		$js = '(function(){' . implode( '', $lines ) . $assign . '})();';
+
+		return $js;
 	}
 
 	/**

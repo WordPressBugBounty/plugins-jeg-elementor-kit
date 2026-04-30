@@ -7,7 +7,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language-Team: Jegtheme <support@jegtheme.com>\n"
-"POT-Creation-Date: 2026-04-22 06:38+0000\n"
+"POT-Creation-Date: 2026-04-30 08:34+0000\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -160,11 +160,11 @@ msgstr ""
 msgid "Clone"
 msgstr ""
 
-#: jeg-elementor-kit/class/assets/class-asset.php:1227
+#: jeg-elementor-kit/class/assets/class-asset.php:1309
 msgid "Jeg Kit - Icons"
 msgstr ""
 
-#: jeg-elementor-kit/class/assets/class-asset.php:1283
+#: jeg-elementor-kit/class/assets/class-asset.php:1365
 msgid "This file cannot be sanitized; therefore, it cannot be checked for security and cannot be uploaded for security reasons. For further inquiries, please contact Jeg Kit support."
 msgstr ""
 
