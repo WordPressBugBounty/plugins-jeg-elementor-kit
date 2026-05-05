@@ -374,6 +374,10 @@ class Dashboard {
 	 * @return void
 	 */
 	public function add_toolbar( $admin_bar ) {
+		if ( ! current_user_can( 'edit_theme_options' ) ) {
+			return;
+		}
+
 		$logo_svg = $this->get_svg_inline( 'assets/svg/jkit-dashboard-menu-logo.svg' );
 		$logo     = $logo_svg ? $logo_svg : '<img src="' . JEG_ELEMENTOR_KIT_URL . '/assets/svg/jkit-dashboard-menu-logo.svg' . '" alt="' . esc_html__( 'Jeg Kit Logo', 'jeg-elementor-kit' ) . '"/>';
 

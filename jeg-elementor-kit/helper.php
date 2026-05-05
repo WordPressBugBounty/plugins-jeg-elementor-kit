@@ -1672,14 +1672,15 @@ if ( ! function_exists( 'jkit_get_pricing_plan' ) ) {
 	function jkit_get_pricing_plan() {
 		$data = get_transient( 'jkit_pricing_plan_cache' );
 
-		// if ( $data ) {
-		// 	return $data;
-		// }
+		if ( $data ) {
+			return $data;
+		}
 
 		$response = wp_remote_request(
-			JEG_ELEMENT_SERVER_URL . 'wp-json/jkit-export/v1/pricingplan',
+			JEG_ELEMENT_SERVER_URL . 'wp-json/jeg-kit/v1/client/pricing-plan',
 			array(
-				'method' => 'POST',
+				'method'  => 'GET',
+				'timeout' => 5,
 			)
 		);
 		if ( is_wp_error( $response ) || 200 !== $response['response']['code'] ) {
@@ -1716,9 +1717,10 @@ if ( ! function_exists( 'jkit_get_banner_data' ) ) {
 		}
 
 		$response = wp_remote_request(
-			JEG_ELEMENT_SERVER_URL . 'wp-json/jkit-export/v1/bannerdata',
+			JEG_ELEMENT_SERVER_URL . 'wp-json/jeg-kit/v1/client/banner-data',
 			array(
-				'method' => 'POST',
+				'method'  => 'GET',
+				'timeout' => 5,
 			)
 		);
 		if ( is_wp_error( $response ) || 200 !== $response['response']['code'] ) {

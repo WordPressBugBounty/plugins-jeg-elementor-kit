@@ -166,16 +166,12 @@ class Asset {
 			true
 		);
 
-		// Minimal mirror for shared helpers used in editor bundle
-		$freemius_cfg  = \Jeg\Elementor_Kit\Integrations\Freemius::instance()->get_pricing_config();
 		$editor_option = array(
-			'freemius'    => array( 'pricing' => $freemius_cfg ),
-			'pricingPlan' => jkit_get_pricing_plan(),
-			'imgDir'      => JEG_ELEMENTOR_KIT_URL . '/assets/img/',
+			'pricingDataUrl' => rest_url( 'jkit/v1/pricing-modal-data' ),
+			'wpRestNonce'    => wp_create_nonce( 'wp_rest' ),
 		);
-		$mirror_js     = $this->build_window_assignment_js( 'jkit.options.freemius', $editor_option['freemius'], false )
-			. $this->build_window_assignment_js( 'jkit.pricingPlan', $editor_option['pricingPlan'], false )
-			. $this->build_window_assignment_js( 'jkit.imgDir', $editor_option['imgDir'], false );
+		$mirror_js     = $this->build_window_assignment_js( 'jkit.pricingDataUrl', $editor_option['pricingDataUrl'], false )
+			. $this->build_window_assignment_js( 'jkit.wpRestNonce', $editor_option['wpRestNonce'], false );
 		wp_add_inline_script( 'jkit-editor-bundle', $mirror_js );
 
 	}
@@ -200,18 +196,12 @@ class Asset {
 			wp_enqueue_style( 'jkit-admin', JEG_ELEMENTOR_KIT_URL . '/assets/css/admin/admin.css', array(), JEG_ELEMENTOR_KIT_VERSION );
 			wp_enqueue_script( 'jkit-admin', JEG_ELEMENTOR_KIT_URL . '/assets/js/admin/admin.js', array( 'lodash', 'react', 'react-dom', 'regenerator-runtime', 'wp-api-fetch', 'wp-data', 'wp-hooks', 'wp-i18n', 'wp-notices' ), JEG_ELEMENTOR_KIT_VERSION, true );
 
-			// Provide minimal dashboard options to frontend/admin-bar pages so shared modules
-			// (like the pricing modal) can access Freemius pricing config and related values.
-			$freemius_cfg    = \Jeg\Elementor_Kit\Integrations\Freemius::instance()->get_pricing_config();
 			$frontend_option = array(
-				'freemius'    => array( 'pricing' => $freemius_cfg ),
-				'pricingPlan' => jkit_get_pricing_plan(),
-				'imgDir'      => JEG_ELEMENTOR_KIT_URL . '/assets/img/',
+				'pricingDataUrl' => rest_url( 'jkit/v1/pricing-modal-data' ),
+				'wpRestNonce'    => wp_create_nonce( 'wp_rest' ),
 			);
-			// Mirror only the minimal fields into a safer namespace to avoid collisions
-			$mirror_js = $this->build_window_assignment_js( 'jkit.options.freemius', $frontend_option['freemius'], false )
-				. $this->build_window_assignment_js( 'jkit.pricingPlan', $frontend_option['pricingPlan'], false )
-				. $this->build_window_assignment_js( 'jkit.imgDir', $frontend_option['imgDir'], false );
+			$mirror_js = $this->build_window_assignment_js( 'jkit.pricingDataUrl', $frontend_option['pricingDataUrl'], false )
+				. $this->build_window_assignment_js( 'jkit.wpRestNonce', $frontend_option['wpRestNonce'], false );
 			wp_add_inline_script( 'jkit-admin', $mirror_js );
 		}
 	}
@@ -225,16 +215,12 @@ class Asset {
 		wp_enqueue_style( 'jkit-admin', JEG_ELEMENTOR_KIT_URL . '/assets/css/admin/admin.css', array(), JEG_ELEMENTOR_KIT_VERSION );
 		wp_enqueue_script( 'jkit-admin', JEG_ELEMENTOR_KIT_URL . '/assets/js/admin/admin.js', array( 'lodash', 'react', 'react-dom', 'regenerator-runtime', 'wp-api-fetch', 'wp-data', 'wp-hooks', 'wp-i18n', 'wp-notices' ), JEG_ELEMENTOR_KIT_VERSION, true );
 
-		// Ensure JkitDashboardOption is available on admin pages where `jkit-admin` is loaded.
 		$admin_option = array(
-			'freemius'    => array( 'pricing' => \Jeg\Elementor_Kit\Integrations\Freemius::instance()->get_pricing_config() ),
-			'pricingPlan' => jkit_get_pricing_plan(),
-			'imgDir'      => JEG_ELEMENTOR_KIT_URL . '/assets/img/',
+			'pricingDataUrl' => rest_url( 'jkit/v1/pricing-modal-data' ),
+			'wpRestNonce'    => wp_create_nonce( 'wp_rest' ),
 		);
-		// Mirror only the minimal fields into a safer namespace to avoid collisions
-		$mirror_js = $this->build_window_assignment_js( 'jkit.options.freemius', $admin_option['freemius'], false )
-			. $this->build_window_assignment_js( 'jkit.pricingPlan', $admin_option['pricingPlan'], false )
-			. $this->build_window_assignment_js( 'jkit.imgDir', $admin_option['imgDir'], false );
+		$mirror_js = $this->build_window_assignment_js( 'jkit.pricingDataUrl', $admin_option['pricingDataUrl'], false )
+			. $this->build_window_assignment_js( 'jkit.wpRestNonce', $admin_option['wpRestNonce'], false );
 		wp_add_inline_script( 'jkit-admin', $mirror_js );
 	}
 
