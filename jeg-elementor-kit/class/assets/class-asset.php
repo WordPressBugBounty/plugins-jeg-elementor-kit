@@ -9,6 +9,8 @@
 
 namespace Jeg\Elementor_Kit\Assets;
 
+use Jeg\Elementor_Kit\Integrations\Freemius;
+
 /**
  * Class Asset
  *
@@ -166,12 +168,8 @@ class Asset {
 			true
 		);
 
-		$editor_option = array(
-			'pricingDataUrl' => rest_url( 'jkit/v1/pricing-modal-data' ),
-			'wpRestNonce'    => wp_create_nonce( 'wp_rest' ),
-		);
-		$mirror_js     = $this->build_window_assignment_js( 'jkit.pricingDataUrl', $editor_option['pricingDataUrl'], false )
-			. $this->build_window_assignment_js( 'jkit.wpRestNonce', $editor_option['wpRestNonce'], false );
+		$editor_option = $this->get_pricing_modal_option();
+		$mirror_js     = $this->build_pricing_modal_assignment_js( $editor_option );
 		wp_add_inline_script( 'jkit-editor-bundle', $mirror_js );
 
 	}
@@ -196,12 +194,8 @@ class Asset {
 			wp_enqueue_style( 'jkit-admin', JEG_ELEMENTOR_KIT_URL . '/assets/css/admin/admin.css', array(), JEG_ELEMENTOR_KIT_VERSION );
 			wp_enqueue_script( 'jkit-admin', JEG_ELEMENTOR_KIT_URL . '/assets/js/admin/admin.js', array( 'lodash', 'react', 'react-dom', 'regenerator-runtime', 'wp-api-fetch', 'wp-data', 'wp-hooks', 'wp-i18n', 'wp-notices' ), JEG_ELEMENTOR_KIT_VERSION, true );
 
-			$frontend_option = array(
-				'pricingDataUrl' => rest_url( 'jkit/v1/pricing-modal-data' ),
-				'wpRestNonce'    => wp_create_nonce( 'wp_rest' ),
-			);
-			$mirror_js = $this->build_window_assignment_js( 'jkit.pricingDataUrl', $frontend_option['pricingDataUrl'], false )
-				. $this->build_window_assignment_js( 'jkit.wpRestNonce', $frontend_option['wpRestNonce'], false );
+			$frontend_option = $this->get_pricing_modal_option();
+			$mirror_js       = $this->build_pricing_modal_assignment_js( $frontend_option );
 			wp_add_inline_script( 'jkit-admin', $mirror_js );
 		}
 	}
@@ -215,12 +209,8 @@ class Asset {
 		wp_enqueue_style( 'jkit-admin', JEG_ELEMENTOR_KIT_URL . '/assets/css/admin/admin.css', array(), JEG_ELEMENTOR_KIT_VERSION );
 		wp_enqueue_script( 'jkit-admin', JEG_ELEMENTOR_KIT_URL . '/assets/js/admin/admin.js', array( 'lodash', 'react', 'react-dom', 'regenerator-runtime', 'wp-api-fetch', 'wp-data', 'wp-hooks', 'wp-i18n', 'wp-notices' ), JEG_ELEMENTOR_KIT_VERSION, true );
 
-		$admin_option = array(
-			'pricingDataUrl' => rest_url( 'jkit/v1/pricing-modal-data' ),
-			'wpRestNonce'    => wp_create_nonce( 'wp_rest' ),
-		);
-		$mirror_js = $this->build_window_assignment_js( 'jkit.pricingDataUrl', $admin_option['pricingDataUrl'], false )
-			. $this->build_window_assignment_js( 'jkit.wpRestNonce', $admin_option['wpRestNonce'], false );
+		$admin_option = $this->get_pricing_modal_option();
+		$mirror_js    = $this->build_pricing_modal_assignment_js( $admin_option );
 		wp_add_inline_script( 'jkit-admin', $mirror_js );
 	}
 
@@ -290,6 +280,84 @@ class Asset {
 		$option['element_prefix'] = self::$element_ajax_prefix;
 
 		return $option;
+	}
+
+	/**
+	 * Build pricing modal payload for client-side usage.
+	 *
+	 * @return array
+	 */
+	protected function get_pricing_modal_option() {
+		$pricing_config = Freemius::instance()->get_pricing_config();
+
+		return array(
+			'freemius'       => array(
+				'pricing' => $pricing_config,
+			),
+			'pricingPlan'    => jkit_get_pricing_plan(),
+			'imgDir'         => JEG_ELEMENTOR_KIT_URL . '/assets/img/',
+			'pricingData'    => $this->get_localized_pricing_data( $pricing_config ),
+			'wpRestNonce'    => wp_create_nonce( 'wp_rest' ),
+		);
+	}
+
+	/**
+	 * Fetch and cache Freemius pricing plans for localize payload.
+	 *
+	 * @param array|null $pricing_config Freemius pricing config.
+	 *
+	 * @return array|null
+	 */
+	protected function get_localized_pricing_data( $pricing_config ) {
+		if ( empty( $pricing_config ) ) {
+			return null;
+		}
+
+		$transient_key = 'jkit_pricing_data_' . md5( wp_json_encode( array(
+			isset( $pricing_config['plugin_id'] ) ? $pricing_config['plugin_id'] : '',
+			isset( $pricing_config['bundle_id'] ) ? $pricing_config['bundle_id'] : '',
+			isset( $pricing_config['sandbox'] ) ? $pricing_config['sandbox'] : '',
+			isset( $pricing_config['s_ctx_type'] ) ? $pricing_config['s_ctx_type'] : '',
+			isset( $pricing_config['s_ctx_id'] ) ? $pricing_config['s_ctx_id'] : '',
+			isset( $pricing_config['s_ctx_secure'] ) ? $pricing_config['s_ctx_secure'] : '',
+		) ) );
+
+		$cached = get_transient( $transient_key );
+		if ( false !== $cached ) {
+			return $cached;
+		}
+
+		$data = Freemius::instance()->get_pricing_data();
+		if ( empty( $data['plans'] ) || ! is_array( $data['plans'] ) ) {
+			return null;
+		}
+
+		set_transient( $transient_key, $data, 10 * MINUTE_IN_SECONDS );
+
+		return $data;
+	}
+
+	/**
+	 * Build JS assignments for pricing modal variables on both legacy and dashboard globals.
+	 *
+	 * @param array $option Pricing payload.
+	 *
+	 * @return string
+	 */
+	protected function build_pricing_modal_assignment_js( $option ) {
+		$mirror_js = $this->build_window_assignment_js( 'jkit.options.freemius', $option['freemius'], false )
+			. $this->build_window_assignment_js( 'jkit.pricingPlan', $option['pricingPlan'], false )
+			. $this->build_window_assignment_js( 'jkit.imgDir', $option['imgDir'], false )
+			. $this->build_window_assignment_js( 'jkit.pricingData', $option['pricingData'], false )
+			. $this->build_window_assignment_js( 'jkit.wpRestNonce', $option['wpRestNonce'], false )
+			. $this->build_window_assignment_js( 'JkitDashboardOption.freemius', $option['freemius'], false )
+			. $this->build_window_assignment_js( 'JkitDashboardOption.pricingPlan', $option['pricingPlan'], false )
+			. $this->build_window_assignment_js( 'JkitDashboardOption.imgDir', $option['imgDir'], false )
+			. $this->build_window_assignment_js( 'JkitDashboardOption.pricingData', $option['pricingData'], false )
+			. $this->build_window_assignment_js( 'JkitPricingCache.data', $option['pricingData'], false )
+			. $this->build_window_assignment_js( 'JkitDashboardOption.wpRestNonce', $option['wpRestNonce'], false );
+
+		return $mirror_js;
 	}
 
 	/**
