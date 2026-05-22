@@ -65,6 +65,23 @@ class WPML {
 			),
 		);
 
+		/** Jeg Kit - Off Canvas Widget */
+		$widgets['jkit_off_canvas'] = array(
+			'conditions' => array( 'widgetType' => 'jkit_off_canvas' ),
+			'fields'     => array(
+				$this->field( 'sg_setting_open_text', __( 'Jeg Kit Off Canvas: Setting: Open Text', 'jeg-elementor-kit' ) ),
+			),
+		);
+
+		/** Jeg Kit - Search Widget */
+		$widgets['jkit_search'] = array(
+			'conditions' => array( 'widgetType' => 'jkit_search' ),
+			'fields'     => array(
+				$this->field( 'sg_search_placeholder', __( 'Jeg Kit Search: Search: Placeholder', 'jeg-elementor-kit' ) ),
+				$this->field( 'sg_search_text', __( 'Jeg Kit Search: Search: Text', 'jeg-elementor-kit' ) ),
+			),
+		);
+
 		/** Jeg Kit - Accordion Widget */
 		$widgets['jkit_accordion'] = array(
 			'conditions'        => array( 'widgetType' => 'jkit_accordion' ),
