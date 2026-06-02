@@ -175,6 +175,41 @@ class Dashboard {
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_scripts' ), 12 );
 		add_action( 'wizard_enqueue_scripts', array( $this, 'enqueue_scripts' ), 12 );
+		add_action( 'current_screen', array( $this, 'suppress_dashboard_notices' ) );
+	}
+
+	/**
+	 * Suppress WordPress admin notices on the Jeg Kit dashboard.
+	 *
+	 * @param \WP_Screen $screen Current admin screen.
+	 */
+	public function suppress_dashboard_notices( $screen ) {
+		if ( ! $screen || 'toplevel_page_jkit' !== $screen->id ) {
+			return;
+		}
+
+		remove_all_actions( 'admin_notices' );
+		remove_all_actions( 'all_admin_notices' );
+		remove_all_actions( 'network_admin_notices' );
+		remove_all_actions( 'user_admin_notices' );
+
+		add_action( 'admin_head', array( $this, 'hide_dashboard_notices' ) );
+	}
+
+	/**
+	 * Hide notices printed outside the standard notice hooks.
+	 */
+	public function hide_dashboard_notices() {
+		?>
+		<style>
+			#wpbody-content > .notice,
+			#wpbody-content > .error,
+			#wpbody-content > .updated,
+			#wpbody-content > .update-nag {
+				display: none !important;
+			}
+		</style>
+		<?php
 	}
 
 	/**

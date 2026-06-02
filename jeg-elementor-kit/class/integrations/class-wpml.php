@@ -110,6 +110,7 @@ class WPML {
 				$this->field( 'sg_title_before', __( 'Jeg Kit Heading: Title: Before Focused Title', 'jeg-elementor-kit' ) ),
 				$this->field( 'sg_title_focused', __( 'Jeg Kit Heading: Title: Focused Title', 'jeg-elementor-kit' ) ),
 				$this->field( 'sg_title_after', __( 'Jeg Kit Heading: Title: After Focused Title', 'jeg-elementor-kit' ) ),
+				$this->field( 'sg_title_text', __( 'Jeg Kit Heading: Title: Highlight Title', 'jeg-elementor-kit' ) ),
 				$this->field( 'sg_subtitle_heading', __( 'Jeg Kit Heading: Subtitle: Heading Sub Title', 'jeg-elementor-kit' ) ),
 				$this->field( 'sg_description', __( 'Jeg Kit Heading: Description: Heading Description', 'jeg-elementor-kit' ), 'VISUAL' ),
 				$this->field( 'sg_shadow_content', __( 'Jeg Kit Heading: Shadow Text: Content', 'jeg-elementor-kit' ) ),

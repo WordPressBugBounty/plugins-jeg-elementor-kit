@@ -4,7 +4,7 @@ Tags: elementor, elements, addons, widgets, templates
 Requires at least: 5.0
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 3.2.1
+Stable tag: 3.2.2
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -201,6 +201,11 @@ Visit **[https://jegkit.com/](https://jegkit.com/)** for live demos, tutorials, 
 This major release introduces Mega Menu Builder, 114 demo templates, and a redesigned dashboard. Update now to explore new features and improved performance.
 
 == Changelog ==
+
+= 3.2.2 - 2026-06-02 =
+* Improvement: Added WPML compatibility for the Heading widget highlight title.
+* Fix: Fatal Error, Class Elementor\Plugin not found.
+* Tweak: Add Banner in Jeg Kit Dashboard.
 
 = 3.2.1 - 23-05-2026 =
 * Improvement: Added compatibility for WordPress 7.0.
