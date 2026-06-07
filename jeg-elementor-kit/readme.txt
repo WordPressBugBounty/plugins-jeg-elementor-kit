@@ -4,7 +4,7 @@ Tags: elementor, elements, addons, widgets, templates
 Requires at least: 5.0
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 3.2.2
+Stable tag: 3.2.3
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -202,7 +202,12 @@ This major release introduces Mega Menu Builder, 114 demo templates, and a redes
 
 == Changelog ==
 
-= 3.2.2 - 2026-06-02 =
+= 3.2.3 - 07-06-2026 = 
+* Improvement: Added WPML compatibility for the Nav Menu widget mobile custom link.
+* Fix: Options in the input can't be clicked on in the Contact Form 7 widget
+* Tweak: Align Theme Builder access
+
+= 3.2.2 - 02-06-2026 =
 * Improvement: Added WPML compatibility for the Heading widget highlight title.
 * Fix: Fatal Error, Class Elementor\Plugin not found.
 * Tweak: Add Banner in Jeg Kit Dashboard.

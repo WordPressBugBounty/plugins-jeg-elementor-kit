@@ -82,6 +82,14 @@ class WPML {
 			),
 		);
 
+		/** Jeg Kit - Nav Menu Widget */
+		$widgets['jkit_nav_menu'] = array(
+			'conditions' => array( 'widgetType' => 'jkit_nav_menu' ),
+			'fields'     => array(
+				'sg_mobile_menu_custom_link' => $this->field( 'url', __( 'Jeg Kit Nav Menu: Mobile Menu: Custom Link', 'jeg-elementor-kit' ), 'LINK' ),
+			),
+		);
+
 		/** Jeg Kit - Accordion Widget */
 		$widgets['jkit_accordion'] = array(
 			'conditions'        => array( 'widgetType' => 'jkit_accordion' ),

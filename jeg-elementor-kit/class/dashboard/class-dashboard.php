@@ -1074,16 +1074,29 @@ class Dashboard {
 	 * @return array
 	 */
 	public function get_theme_builder_desc() {
+		$header_publish_desc = defined( 'JEG_KIT_PRO' )
+			? __( 'These are your active Header Templates. You can create multiple header and drag them to reorder.', 'jeg-elementor-kit' )
+			: __( 'These are your active Header Templates. You can create multiple header and drag them to reorder. Upgrade to Pro to make more Templates.', 'jeg-elementor-kit' );
+		$header_empty_desc   = defined( 'JEG_KIT_PRO' )
+			? __( 'Add Header Templates to use them across your website. You can create multiple header and select where to use them.', 'jeg-elementor-kit' )
+			: __( 'Add Header Templates to use them across your website. You can create multiple header and select where to use them. Upgrade to Pro to make more Templates.', 'jeg-elementor-kit' );
+		$footer_publish_desc = defined( 'JEG_KIT_PRO' )
+			? __( 'These are your active Footer Templates. You can create multiple footer and drag them to reorder.', 'jeg-elementor-kit' )
+			: __( 'These are your active Footer Templates. You can create multiple footer and drag them to reorder. Upgrade to Pro to make more Templates.', 'jeg-elementor-kit' );
+		$footer_empty_desc   = defined( 'JEG_KIT_PRO' )
+			? __( 'Add Footer Templates to use them across your website. You can create multiple footer and select where to use them.', 'jeg-elementor-kit' )
+			: __( 'Add Footer Templates to use them across your website. You can create multiple footer and select where to use them. Upgrade to Pro to make more Templates.', 'jeg-elementor-kit' );
+
 		return array(
 			self::$jkit_header  => array(
-				'publish' => __( 'These are your active Header Templates. You can create multiple header and drag them to reorder.', 'jeg-elementor-kit' ),
+				'publish' => $header_publish_desc,
 				'draft'   => __( 'These are your unused Header Templates. You can deletes or activate header template from this list', 'jeg-elementor-kit' ),
-				'empty'   => __( 'Add Header Templates to use them across your website. You can create multiple header and select where to use them.', 'jeg-elementor-kit' ),
+				'empty'   => $header_empty_desc,
 			),
 			self::$jkit_footer  => array(
-				'publish' => __( 'These are your active Footer Templates. You can create multiple footer and drag them to reorder.', 'jeg-elementor-kit' ),
+				'publish' => $footer_publish_desc,
 				'draft'   => __( 'These are your unused Footer Templates. You can deletes or activate footer template from this list', 'jeg-elementor-kit' ),
-				'empty'   => __( 'Add Footer Templates to use them across your website. You can create multiple footer and select where to use them.', 'jeg-elementor-kit' ),
+				'empty'   => $footer_empty_desc,
 
 			),
 			self::$jkit_post    => array(
