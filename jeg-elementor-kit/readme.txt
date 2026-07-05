@@ -4,7 +4,7 @@ Tags: elementor, elements, addons, widgets, templates
 Requires at least: 5.0
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 3.2.6
+Stable tag: 3.2.7
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -203,6 +203,10 @@ Visit **[https://jegkit.com/](https://jegkit.com/)** for live demos, tutorials, 
 This major release introduces Mega Menu Builder, 114 demo templates, and a redesigned dashboard. Update now to explore new features and improved performance.
 
 == Changelog ==
+
+= 3.2.7 - 05-07-2026 =
+* Improvement: Security issues
+* Improvement: Added WPML compatibility for the Video Button widget.
 
 = 3.2.6 - 28-06-2026 =
 * Improvement: Added WPML compatibility for the Dual Button widget.

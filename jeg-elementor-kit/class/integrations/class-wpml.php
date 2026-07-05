@@ -124,6 +124,15 @@ class WPML {
 			),
 		);
 
+		/** Jeg Kit - Video Button Widget */
+		$widgets['jkit_video_button'] = array(
+			'conditions' => array( 'widgetType' => 'jkit_video_button' ),
+			'fields'     => array(
+				$this->field( 'sg_video_button_title', __( 'Jeg Kit Video Button: Video: Button Title', 'jeg-elementor-kit' ) ),
+				$this->field( 'sg_video_url', __( 'Jeg Kit Video Button: Video: Video URL', 'jeg-elementor-kit' ), 'LINK' ),
+			),
+		);
+
 		/** Jeg Kit - Accordion Widget */
 		$widgets['jkit_accordion'] = array(
 			'conditions'        => array( 'widgetType' => 'jkit_accordion' ),
