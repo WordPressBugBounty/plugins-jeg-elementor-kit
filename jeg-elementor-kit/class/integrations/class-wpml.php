@@ -133,6 +133,23 @@ class WPML {
 			),
 		);
 
+		/** Jeg Kit - Mailchimp Widget */
+		$widgets['jkit_mailchimp'] = array(
+			'conditions' => array( 'widgetType' => 'jkit_mailchimp' ),
+			'fields'     => array(
+				$this->field( 'sg_form_name_first_label', __( 'Jeg Kit Mailchimp: Form: First Name Label', 'jeg-elementor-kit' ) ),
+				$this->field( 'sg_form_name_first_placeholder', __( 'Jeg Kit Mailchimp: Form: First Name Placeholder', 'jeg-elementor-kit' ) ),
+				$this->field( 'sg_form_name_last_label', __( 'Jeg Kit Mailchimp: Form: Last Name Label', 'jeg-elementor-kit' ) ),
+				$this->field( 'sg_form_name_last_placeholder', __( 'Jeg Kit Mailchimp: Form: Last Name Placeholder', 'jeg-elementor-kit' ) ),
+				$this->field( 'sg_form_phone_label', __( 'Jeg Kit Mailchimp: Form: Phone Label', 'jeg-elementor-kit' ) ),
+				$this->field( 'sg_form_phone_placeholder', __( 'Jeg Kit Mailchimp: Form: Phone Placeholder', 'jeg-elementor-kit' ) ),
+				$this->field( 'sg_form_email_label', __( 'Jeg Kit Mailchimp: Form: Email Label', 'jeg-elementor-kit' ) ),
+				$this->field( 'sg_form_email_placeholder', __( 'Jeg Kit Mailchimp: Form: Email Placeholder', 'jeg-elementor-kit' ) ),
+				$this->field( 'sg_form_button_text', __( 'Jeg Kit Mailchimp: Form: Button Text', 'jeg-elementor-kit' ) ),
+				$this->field( 'sg_form_success_message', __( 'Jeg Kit Mailchimp: Form: Success Message', 'jeg-elementor-kit' ) ),
+			),
+		);
+
 		/** Jeg Kit - Accordion Widget */
 		$widgets['jkit_accordion'] = array(
 			'conditions'        => array( 'widgetType' => 'jkit_accordion' ),
