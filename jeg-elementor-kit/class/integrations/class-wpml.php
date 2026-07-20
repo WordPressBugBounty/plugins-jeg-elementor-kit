@@ -150,6 +150,21 @@ class WPML {
 			),
 		);
 
+		/** Jeg Kit - Banner Widget */
+		$widgets['jkit_banner'] = array(
+			'conditions' => array( 'widgetType' => 'jkit_banner' ),
+			'fields'     => array(
+				$this->field( 'sg_banner_title', __( 'Jeg Kit Banner: Banner: Title', 'jeg-elementor-kit' ) ),
+				$this->field( 'sg_banner_subtitle', __( 'Jeg Kit Banner: Banner: Subtitle', 'jeg-elementor-kit' ) ),
+				$this->field( 'sg_banner_description', __( 'Jeg Kit Banner: Banner: Description', 'jeg-elementor-kit' ), 'VISUAL' ),
+				$this->field( 'sg_button_text', __( 'Jeg Kit Banner: Button: Text', 'jeg-elementor-kit' ) ),
+				'sg_button_link' => $this->field( 'url', __( 'Jeg Kit Banner: Button: Link', 'jeg-elementor-kit' ), 'LINK' ),
+				$this->field( 'sg_box_sale_before_text', __( 'Jeg Kit Banner: Box Sale: Before Text', 'jeg-elementor-kit' ) ),
+				$this->field( 'sg_box_sale_text', __( 'Jeg Kit Banner: Box Sale: Text', 'jeg-elementor-kit' ) ),
+				$this->field( 'sg_box_sale_unit', __( 'Jeg Kit Banner: Box Sale: Unit', 'jeg-elementor-kit' ) ),
+			),
+		);
+
 		/** Jeg Kit - Accordion Widget */
 		$widgets['jkit_accordion'] = array(
 			'conditions'        => array( 'widgetType' => 'jkit_accordion' ),
