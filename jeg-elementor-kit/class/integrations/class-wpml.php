@@ -304,6 +304,14 @@ class WPML {
 			),
 		);
 
+		/** Jeg Kit - Post Author Widget */
+		$widgets['jkit_post_author'] = array(
+			'conditions' => array( 'widgetType' => 'jkit_post_author' ),
+			'fields'     => array(
+				'sg_author_link_to_custom' => $this->field( 'url', __( 'Jeg Kit Post Author: Author: Custom Link', 'jeg-elementor-kit' ), 'LINK' ),
+			),
+		);
+
 		return $widgets;
 	}
 
