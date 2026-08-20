@@ -320,6 +320,14 @@ class WPML {
 			),
 		);
 
+		/** Jeg Kit - Post Featured Image Widget */
+		$widgets['jkit_post_featured_image'] = array(
+			'conditions' => array( 'widgetType' => 'jkit_post_featured_image' ),
+			'fields'     => array(
+				'sg_image_link_to_custom' => $this->field( 'url', __( 'Jeg Kit Post Featured Image: Image: Custom Link', 'jeg-elementor-kit' ), 'LINK' ),
+			),
+		);
+
 		return $widgets;
 	}
 

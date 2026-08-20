@@ -2,9 +2,9 @@
 Contributors: Jegtheme
 Tags: elementor, elements, addons, widgets, templates
 Requires at least: 5.0
-Tested up to: 7.0
+Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 3.2.13
+Stable tag: 3.2.14
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -203,6 +203,9 @@ Visit **[https://jegkit.com/](https://jegkit.com/)** for live demos, tutorials, 
 This major release introduces Mega Menu Builder, 114 demo templates, and a redesigned dashboard. Update now to explore new features and improved performance.
 
 == Changelog ==
+
+= 3.2.14 - 20-08-2026 =
+* Improvement: Added WPML compatibility for the Post Featured Image widget.
 
 = 3.2.13 - 18-08-2026 =
 * Improvement: Added WPML compatibility for the Post Title widget.
