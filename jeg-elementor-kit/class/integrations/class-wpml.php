@@ -328,6 +328,14 @@ class WPML {
 			),
 		);
 
+		/** Jeg Kit - Post Excerpt Widget */
+		$widgets['jkit_post_excerpt'] = array(
+			'conditions' => array( 'widgetType' => 'jkit_post_excerpt' ),
+			'fields'     => array(
+				'sg_excerpt_link_to_custom' => $this->field( 'url', __( 'Jeg Kit Post Excerpt: Excerpt: Custom Link', 'jeg-elementor-kit' ), 'LINK' ),
+			),
+		);
+
 		return $widgets;
 	}
 

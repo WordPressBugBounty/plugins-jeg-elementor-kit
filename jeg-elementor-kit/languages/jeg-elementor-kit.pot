@@ -7,7 +7,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language-Team: Jegtheme <support@jegtheme.com>\n"
-"POT-Creation-Date: 2026-08-20 09:30+0000\n"
+"POT-Creation-Date: 2026-08-26 09:39+0000\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -1047,6 +1047,10 @@ msgstr ""
 
 #: jeg-elementor-kit/class/integrations/class-wpml.php:327
 msgid "Jeg Kit Post Featured Image: Image: Custom Link"
+msgstr ""
+
+#: jeg-elementor-kit/class/integrations/class-wpml.php:335
+msgid "Jeg Kit Post Excerpt: Excerpt: Custom Link"
 msgstr ""
 
 #: jeg-elementor-kit/class/options/class-settings.php:268
