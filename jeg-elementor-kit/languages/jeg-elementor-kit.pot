@@ -7,7 +7,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language-Team: Jegtheme <support@jegtheme.com>\n"
-"POT-Creation-Date: 2026-08-26 09:39+0000\n"
+"POT-Creation-Date: 2026-09-03 05:52+0000\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -41,11 +41,11 @@ msgid "Upgrade To PRO"
 msgstr ""
 
 #. translators: 1: Plugin name, 2: Upgrade URL, 3: Additional upgrade link attributes, 4: Pricing URL, 5: Free update URL, 6: Free update label.
-#: jeg-elementor-kit/helper.php:1941
+#: jeg-elementor-kit/helper.php:1943
 msgid "A new version of %1$s is available. <strong><a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\" %3$s>Upgrade to Pro</a></strong> to unlock automatic updates premium features, widgets, templates, and priority support, or <strong><a href=\"%4$s\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"jkit-update-now-pricing\" data-continue-url=\"%5$s\" data-continue-label=\"%6$s\">update now</a></strong>."
 msgstr ""
 
-#: jeg-elementor-kit/helper.php:1969
+#: jeg-elementor-kit/helper.php:1971
 msgid "Continue Free Update"
 msgstr ""
 
@@ -177,11 +177,11 @@ msgstr ""
 msgid "Clone"
 msgstr ""
 
-#: jeg-elementor-kit/class/assets/class-asset.php:1378
+#: jeg-elementor-kit/class/assets/class-asset.php:1389
 msgid "Jeg Kit - Icons"
 msgstr ""
 
-#: jeg-elementor-kit/class/assets/class-asset.php:1434
+#: jeg-elementor-kit/class/assets/class-asset.php:1445
 msgid "This file cannot be sanitized; therefore, it cannot be checked for security and cannot be uploaded for security reasons. For further inquiries, please contact Jeg Kit support."
 msgstr ""
 
@@ -281,263 +281,263 @@ msgstr ""
 msgid "Not Found 404"
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:846, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:132
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:847, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:132
 msgid "Location"
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:847, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:133
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:848, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:133
 msgid "Set where should this template will be shown."
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:849, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:135
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:850, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:135
 msgid "All Site"
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:850, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:136
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:851, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:136
 msgid "Singular Page"
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:851, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:137
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:852, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:137
 msgid "Archive Page"
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:858, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:144
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:859, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:144
 msgid "Enclose Status"
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:859, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:145
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:860, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:145
 msgid "Choose the enclosed status."
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:861, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:147
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:862, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:147
 msgid "Include"
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:862, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:148
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:863, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:148
 msgid "Exclude"
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:879, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:165
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:880, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:165
 msgid "Archive Type"
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:880, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:166
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:881, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:166
 msgid "Choose the archive page type."
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:882, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:168
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:883, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:168
 msgid "All Archives"
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:883, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:169, jeg-elementor-kit/class/elements/options/class-post-author-option.php:101, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:382
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:884, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:169, jeg-elementor-kit/class/elements/options/class-post-author-option.php:101, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:382
 msgid "Author"
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:884, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:170
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:885, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:170
 msgid "Date"
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:885, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:171, jeg-elementor-kit/class/elements/options/class-gallery-option.php:189, jeg-elementor-kit/class/elements/options/class-search-option.php:75, jeg-elementor-kit/class/elements/views/class-search-view.php:75, jeg-elementor-kit/class/elements/views/class-search-view.php:77
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:886, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:171, jeg-elementor-kit/class/elements/options/class-gallery-option.php:189, jeg-elementor-kit/class/elements/options/class-search-option.php:75, jeg-elementor-kit/class/elements/views/class-search-view.php:75, jeg-elementor-kit/class/elements/views/class-search-view.php:77
 msgid "Search"
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:902, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:188
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:903, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:188
 msgid "Archive Author"
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:903, jeg-elementor-kit/class/dashboard/class-dashboard.php:1029, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:189, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:343
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:904, jeg-elementor-kit/class/dashboard/class-dashboard.php:1030, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:189, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:343
 msgid "Write the author name to search."
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:923, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:215
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:924, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:215
 msgid "Archive Taxonomy"
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:924, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:216
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:925, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:216
 msgid "Write the terms name to search. Leave empty to select all terms."
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:946, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:246
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:947, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:246
 msgid "Singular Type"
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:947, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:247
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:948, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:247
 msgid "Choose singular type."
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:949, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:249
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:950, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:249
 msgid "Singular"
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:950, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:250
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:951, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:250
 msgid "Front Page"
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:951, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:251
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:952, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:251
 msgid "404 Page"
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:965, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:265
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:966, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:265
 msgid "Post Type Filter"
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:966, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:266
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:967, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:266
 msgid "Choose post type as filter."
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:986, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:286
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:987, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:286
 msgid "Include Post / Page"
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:987, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:287
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:988, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:287
 msgid "Write post or page name to search."
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1007, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:315
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1008, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:315
 msgid "Terms Name"
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1008, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:316
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1009, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:316
 msgid "Write terms name (Ex: category name, tag name, etc) to search."
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1028, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:342
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1029, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:342
 msgid "Author Name"
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1050, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:369
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1051, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:369
 msgid "Language"
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1051, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:370
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1052, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:370
 msgid "Select the language for the template."
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1055, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:374
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1056, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:374
 msgid "All Language"
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1078
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1079
 msgid "These are your active Header Templates. You can create multiple header and drag them to reorder."
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1079
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1080
 msgid "These are your active Header Templates. You can create multiple header and drag them to reorder. Upgrade to Pro to make more Templates."
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1081
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1082
 msgid "Add Header Templates to use them across your website. You can create multiple header and select where to use them."
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1082
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1083
 msgid "Add Header Templates to use them across your website. You can create multiple header and select where to use them. Upgrade to Pro to make more Templates."
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1084
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1085
 msgid "These are your active Footer Templates. You can create multiple footer and drag them to reorder."
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1085
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1086
 msgid "These are your active Footer Templates. You can create multiple footer and drag them to reorder. Upgrade to Pro to make more Templates."
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1087
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1088
 msgid "Add Footer Templates to use them across your website. You can create multiple footer and select where to use them."
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1088
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1089
 msgid "Add Footer Templates to use them across your website. You can create multiple footer and select where to use them. Upgrade to Pro to make more Templates."
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1093
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1094
 msgid "These are your unused Header Templates. You can deletes or activate header template from this list"
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1098
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1099
 msgid "These are your unused Footer Templates. You can deletes or activate footer template from this list"
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1103
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1104
 msgid "These are your active Single Post Templates. You can create multiple activate and drag them to reorder."
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1104
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1105
 msgid "These are your unused Single Post Templates. You can deletes or activate Single Post Templates from this list"
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1105
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1106
 msgid "Add single post template to use them across your website. You can create multiple Single Post Templates and select where to use them."
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1109
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1110
 msgid "These are your active Single Product Templates. You can create multiple single product template and drag them to reorder."
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1110
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1111
 msgid "These are your unused Single Product Templates. You can deletes or activate single product template from this list"
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1111
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1112
 msgid "Add single Product Templates to use them across your website. You can create multiple single product template and select where to use them."
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1115
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1116
 msgid "These are your active Archive Templates. You can create multiple archive template and drag them to reorder."
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1116
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1117
 msgid "These are your unused Archive Templates. You can deletes or activate archive template from this list"
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1117
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1118
 msgid "Add Archive Templates to use them across your website. You can create multiple archive template and select where to use them."
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1121
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1122
 msgid "These are your active Popup Templates. You can create multiple popup and drag them to reorder."
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1122
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1123
 msgid "These are your unused Popup Templates. You can deletes or activate popup template from this list"
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1123
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1124
 msgid "Add Popup Templates to use them across your website. You can create multiple popup template and select where to use them."
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1227
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1228
 msgid "Jeg Kit Elements"
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1228
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1229
 msgid "Jeg Kit Post"
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1232
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1233
 msgid "Jeg Kit WooCommerce"
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1256
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1257
 msgid "Jeg Kit - Header "
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1259
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1260
 msgid "Jeg Kit - Footer "
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1262
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1263
 msgid "Jeg Kit - Template "
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1680, jeg-elementor-kit/class/dashboard/class-dashboard.php:1682, jeg-elementor-kit/class/dashboard/class-dashboard.php:1683
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1681, jeg-elementor-kit/class/dashboard/class-dashboard.php:1683, jeg-elementor-kit/class/dashboard/class-dashboard.php:1684
 msgid "unknown"
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1685, jeg-elementor-kit/class/elements/options/class-post-block-option.php:569
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1686, jeg-elementor-kit/class/elements/options/class-post-block-option.php:569
 msgid "by"
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1735
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:1736
 msgid "Get Started"
 msgstr ""
 
@@ -1051,6 +1051,10 @@ msgstr ""
 
 #: jeg-elementor-kit/class/integrations/class-wpml.php:335
 msgid "Jeg Kit Post Excerpt: Excerpt: Custom Link"
+msgstr ""
+
+#: jeg-elementor-kit/class/integrations/class-wpml.php:343
+msgid "Jeg Kit Post Terms: Terms: Separator"
 msgstr ""
 
 #: jeg-elementor-kit/class/options/class-settings.php:268

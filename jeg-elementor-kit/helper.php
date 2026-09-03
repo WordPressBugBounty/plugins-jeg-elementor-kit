@@ -1776,11 +1776,13 @@ if ( ! function_exists( 'jkit_get_banner_data' ) ) {
 	/**
 	 * Get Event Banner
 	 *
+	 * @param bool $ignore_closed Whether to ignore the closed transient state.
+	 *
 	 * @return mixed
 	 */
-	function jkit_get_banner_data() {
+	function jkit_get_banner_data( $ignore_closed = false ) {
 		$banner_closed = get_transient( 'jkit_banner_closed' );
-		if ( $banner_closed ) {
+		if ( $banner_closed && ! $ignore_closed ) {
 			return null;
 		}
 		$data = get_transient( 'jkit_banner_cache' );

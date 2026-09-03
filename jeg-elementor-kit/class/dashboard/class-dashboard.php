@@ -780,6 +780,7 @@ class Dashboard {
 			'themeBuilderDesc'  => $this->get_theme_builder_desc(),
 			'conditionFields'   => $this->condition_fields(),
 			'bannerData'        => jkit_get_banner_data(),
+			'bannerDataPricing' => jkit_get_banner_data( true ),
 			'bannerNonce'       => wp_create_nonce( 'jkit-banner' ),
 			'wpRestNonce'       => wp_create_nonce( 'wp_rest' ),
 			'pricingPlan'       => jkit_get_pricing_plan(),

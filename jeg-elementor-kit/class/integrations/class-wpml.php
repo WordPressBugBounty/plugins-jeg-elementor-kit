@@ -336,6 +336,14 @@ class WPML {
 			),
 		);
 
+		/** Jeg Kit - Post Terms Widget */
+		$widgets['jkit_post_terms'] = array(
+			'conditions' => array( 'widgetType' => 'jkit_post_terms' ),
+			'fields'     => array(
+				$this->field( 'sg_term_separator', __( 'Jeg Kit Post Terms: Terms: Separator', 'jeg-elementor-kit' ) ),
+			),
+		);
+
 		return $widgets;
 	}
 

@@ -310,6 +310,7 @@ class Asset {
 				'pricing' => $pricing_config,
 			),
 			'pricingPlan'    => jkit_get_pricing_plan(),
+			'bannerDataPricing' => jkit_get_banner_data( true ),
 			'imgDir'         => JEG_ELEMENTOR_KIT_URL . '/assets/img/',
 			'pricingData'    => $this->get_localized_pricing_data( $pricing_config ),
 			'wpRestNonce'    => wp_create_nonce( 'wp_rest' ),
@@ -362,11 +363,13 @@ class Asset {
 	protected function build_pricing_modal_assignment_js( $option ) {
 		$mirror_js = $this->build_window_assignment_js( 'jkit.options.freemius', $option['freemius'], false )
 			. $this->build_window_assignment_js( 'jkit.pricingPlan', $option['pricingPlan'], false )
+			. $this->build_window_assignment_js( 'jkit.bannerDataPricing', $option['bannerDataPricing'], false )
 			. $this->build_window_assignment_js( 'jkit.imgDir', $option['imgDir'], false )
 			. $this->build_window_assignment_js( 'jkit.pricingData', $option['pricingData'], false )
 			. $this->build_window_assignment_js( 'jkit.wpRestNonce', $option['wpRestNonce'], false )
 			. $this->build_window_assignment_js( 'JkitDashboardOption.freemius', $option['freemius'], false )
 			. $this->build_window_assignment_js( 'JkitDashboardOption.pricingPlan', $option['pricingPlan'], false )
+			. $this->build_window_assignment_js( 'JkitDashboardOption.bannerDataPricing', $option['bannerDataPricing'], false )
 			. $this->build_window_assignment_js( 'JkitDashboardOption.imgDir', $option['imgDir'], false )
 			. $this->build_window_assignment_js( 'JkitDashboardOption.pricingData', $option['pricingData'], false )
 			. $this->build_window_assignment_js( 'JkitPricingCache.data', $option['pricingData'], false )
@@ -999,21 +1002,25 @@ class Asset {
 		}
 
 		for ( $i = 0; $i < $count_breakpoints - 1; $i++ ) {
-			$items = $settings[ 'sg_setting_slide_show_responsive_' . $breakpoints[ $i ]['key'] ];
+			if ( isset( $settings[ 'sg_setting_slide_show_responsive_' . $breakpoints[ $i ]['key'] ]['size'] ) && ! empty( $settings[ 'sg_setting_slide_show_responsive_' . $breakpoints[ $i ]['key'] ]['size'] ) ) {
+				$items = $settings[ 'sg_setting_slide_show_responsive_' . $breakpoints[ $i ]['key'] ];
 
-			$css .= '@media (min-width: ' . strval( $breakpoints[ $i + 1 ]['value'] + 1 ) . 'px) and (max-width: ' . strval( $breakpoints[ $i ]['value'] ) . 'px) {' . $selector . ' .testimonials-track:not(.tns-slider) { display: flex; flex-direction: row; } }';
-			$css .= '@media (min-width: ' . strval( $breakpoints[ $i + 1 ]['value'] + 1 ) . 'px) and (max-width: ' . strval( $breakpoints[ $i ]['value'] ) . 'px) {' . $selector . ' .testimonials-track:not(.tns-slider) .testimonial-item { width: calc(' . strval( $items['size'] ) . ') } }';
-			$css .= '@media (min-width: ' . strval( $breakpoints[ $i + 1 ]['value'] + 1 ) . 'px) and (max-width: ' . strval( $breakpoints[ $i ]['value'] ) . 'px) {' . $selector . ' .testimonials-track:not(.tns-slider) .testimonial-item:nth-child(n+' . strval( (int) $items['size'] + 1 ) . ') { display: none; } }';
-			$css .= '@media (min-width: ' . strval( $breakpoints[ $i + 1 ]['value'] + 1 ) . 'px) and (max-width: ' . strval( $breakpoints[ $i ]['value'] ) . 'px) {' . $selector . ' .testimonials-track:not(.tns-slider):not(:nth-child(' . strval( $items['size'] ) . ')) { margin-right: 10px; } }';
+				$css .= '@media (min-width: ' . strval( $breakpoints[ $i + 1 ]['value'] + 1 ) . 'px) and (max-width: ' . strval( $breakpoints[ $i ]['value'] ) . 'px) {' . $selector . ' .testimonials-track:not(.tns-slider) { display: flex; flex-direction: row; } }';
+				$css .= '@media (min-width: ' . strval( $breakpoints[ $i + 1 ]['value'] + 1 ) . 'px) and (max-width: ' . strval( $breakpoints[ $i ]['value'] ) . 'px) {' . $selector . ' .testimonials-track:not(.tns-slider) .testimonial-item { width: calc(' . strval( $items['size'] ) . ') } }';
+				$css .= '@media (min-width: ' . strval( $breakpoints[ $i + 1 ]['value'] + 1 ) . 'px) and (max-width: ' . strval( $breakpoints[ $i ]['value'] ) . 'px) {' . $selector . ' .testimonials-track:not(.tns-slider) .testimonial-item:nth-child(n+' . strval( (int) $items['size'] + 1 ) . ') { display: none; } }';
+				$css .= '@media (min-width: ' . strval( $breakpoints[ $i + 1 ]['value'] + 1 ) . 'px) and (max-width: ' . strval( $breakpoints[ $i ]['value'] ) . 'px) {' . $selector . ' .testimonials-track:not(.tns-slider):not(:nth-child(' . strval( $items['size'] ) . ')) { margin-right: 10px; } }';
+			}
 		}
 
 		if ( $count_breakpoints > 0 ) {
-			$items = $settings[ 'sg_setting_slide_show_responsive_' . $breakpoints[ $count_breakpoints - 1 ]['key'] ];
+			if ( isset( $settings[ 'sg_setting_slide_show_responsive_' . $breakpoints[ $count_breakpoints - 1 ]['key'] ]['size'] ) && ! empty( $settings[ 'sg_setting_slide_show_responsive_' . $breakpoints[ $count_breakpoints - 1 ]['key'] ]['size'] ) ) {
+				$items = $settings[ 'sg_setting_slide_show_responsive_' . $breakpoints[ $count_breakpoints - 1 ]['key'] ];
 
-			$css .= '@media (max-width: ' . strval( $breakpoints[ $count_breakpoints - 1 ]['value'] ) . 'px) {' . $selector . ' .testimonials-track:not(.tns-slider) { display: flex; flex-direction: row; } }';
-			$css .= '@media (max-width: ' . strval( $breakpoints[ $count_breakpoints - 1 ]['value'] ) . 'px) {' . $selector . ' .testimonials-track:not(.tns-slider) .testimonial-item { width: calc(' . strval( $items['size'] ) . ') } }';
-			$css .= '@media (max-width: ' . strval( $breakpoints[ $count_breakpoints - 1 ]['value'] ) . 'px) {' . $selector . ' .testimonials-track:not(.tns-slider) .testimonial-item:nth-child(n+' . strval( (int) $items['size'] + 1 ) . ') { display: none; } }';
-			$css .= '@media (max-width: ' . strval( $breakpoints[ $count_breakpoints - 1 ]['value'] ) . 'px) {' . $selector . ' .testimonials-track:not(.tns-slider):not(:nth-child(' . strval( $items['size'] ) . ')) { margin-right: 10px; } }';
+				$css .= '@media (max-width: ' . strval( $breakpoints[ $count_breakpoints - 1 ]['value'] ) . 'px) {' . $selector . ' .testimonials-track:not(.tns-slider) { display: flex; flex-direction: row; } }';
+				$css .= '@media (max-width: ' . strval( $breakpoints[ $count_breakpoints - 1 ]['value'] ) . 'px) {' . $selector . ' .testimonials-track:not(.tns-slider) .testimonial-item { width: calc(' . strval( $items['size'] ) . ') } }';
+				$css .= '@media (max-width: ' . strval( $breakpoints[ $count_breakpoints - 1 ]['value'] ) . 'px) {' . $selector . ' .testimonials-track:not(.tns-slider) .testimonial-item:nth-child(n+' . strval( (int) $items['size'] + 1 ) . ') { display: none; } }';
+				$css .= '@media (max-width: ' . strval( $breakpoints[ $count_breakpoints - 1 ]['value'] ) . 'px) {' . $selector . ' .testimonials-track:not(.tns-slider):not(:nth-child(' . strval( $items['size'] ) . ')) { margin-right: 10px; } }';
+			}
 		}
 
 		$post_css->get_stylesheet()->add_raw_css( $css );
@@ -1054,21 +1061,25 @@ class Asset {
 		}
 
 		for ( $i = 0; $i < $count_breakpoints - 1; $i++ ) {
-			$items = $settings[ 'sg_setting_slide_show_responsive_' . $breakpoints[ $i ]['key'] ];
+			if ( isset( $settings[ 'sg_setting_slide_show_responsive_' . $breakpoints[ $i ]['key'] ]['size'] ) && ! empty( $settings[ 'sg_setting_slide_show_responsive_' . $breakpoints[ $i ]['key'] ]['size'] ) ) {
+				$items = $settings[ 'sg_setting_slide_show_responsive_' . $breakpoints[ $i ]['key'] ];
 
-			$css .= '@media (min-width: ' . strval( $breakpoints[ $i + 1 ]['value'] + 1 ) . 'px) and (max-width: ' . strval( $breakpoints[ $i ]['value'] ) . 'px) {' . $selector . ' .client-track:not(.tns-slider) { display: flex; flex-direction: row; } }';
-			$css .= '@media (min-width: ' . strval( $breakpoints[ $i + 1 ]['value'] + 1 ) . 'px) and (max-width: ' . strval( $breakpoints[ $i ]['value'] ) . 'px) {' . $selector . ' .client-track:not(.tns-slider) .client-slider { width: calc(' . strval( $items['size'] ) . ') } }';
-			$css .= '@media (min-width: ' . strval( $breakpoints[ $i + 1 ]['value'] + 1 ) . 'px) and (max-width: ' . strval( $breakpoints[ $i ]['value'] ) . 'px) {' . $selector . ' .client-track:not(.tns-slider) .client-slider:nth-child(n+' . strval( (int) $items['size'] + 1 ) . ') { display: none; } }';
-			$css .= '@media (min-width: ' . strval( $breakpoints[ $i + 1 ]['value'] + 1 ) . 'px) and (max-width: ' . strval( $breakpoints[ $i ]['value'] ) . 'px) {' . $selector . ' .client-track:not(.tns-slider):not(:nth-child(' . strval( $items['size'] ) . ')) { margin-right: 10px; } }';
+				$css .= '@media (min-width: ' . strval( $breakpoints[ $i + 1 ]['value'] + 1 ) . 'px) and (max-width: ' . strval( $breakpoints[ $i ]['value'] ) . 'px) {' . $selector . ' .client-track:not(.tns-slider) { display: flex; flex-direction: row; } }';
+				$css .= '@media (min-width: ' . strval( $breakpoints[ $i + 1 ]['value'] + 1 ) . 'px) and (max-width: ' . strval( $breakpoints[ $i ]['value'] ) . 'px) {' . $selector . ' .client-track:not(.tns-slider) .client-slider { width: calc(' . strval( $items['size'] ) . ') } }';
+				$css .= '@media (min-width: ' . strval( $breakpoints[ $i + 1 ]['value'] + 1 ) . 'px) and (max-width: ' . strval( $breakpoints[ $i ]['value'] ) . 'px) {' . $selector . ' .client-track:not(.tns-slider) .client-slider:nth-child(n+' . strval( (int) $items['size'] + 1 ) . ') { display: none; } }';
+				$css .= '@media (min-width: ' . strval( $breakpoints[ $i + 1 ]['value'] + 1 ) . 'px) and (max-width: ' . strval( $breakpoints[ $i ]['value'] ) . 'px) {' . $selector . ' .client-track:not(.tns-slider):not(:nth-child(' . strval( $items['size'] ) . ')) { margin-right: 10px; } }';
+			}
 		}
 
 		if ( $count_breakpoints > 0 ) {
-			$items = $settings[ 'sg_setting_slide_show_responsive_' . $breakpoints[ $count_breakpoints - 1 ]['key'] ];
+			if ( isset( $settings[ 'sg_setting_slide_show_responsive_' . $breakpoints[ $count_breakpoints - 1 ]['key'] ]['size'] ) && ! empty( $settings[ 'sg_setting_slide_show_responsive_' . $breakpoints[ $count_breakpoints - 1 ]['key'] ]['size'] ) ) {
+				$items = $settings[ 'sg_setting_slide_show_responsive_' . $breakpoints[ $count_breakpoints - 1 ]['key'] ];
 
-			$css .= '@media (max-width: ' . strval( $breakpoints[ $count_breakpoints - 1 ]['value'] ) . 'px) {' . $selector . ' .client-track:not(.tns-slider) { display: flex; flex-direction: row; } }';
-			$css .= '@media (max-width: ' . strval( $breakpoints[ $count_breakpoints - 1 ]['value'] ) . 'px) {' . $selector . ' .client-track:not(.tns-slider) .client-slider { width: calc(' . strval( $items['size'] ) . ') } }';
-			$css .= '@media (max-width: ' . strval( $breakpoints[ $count_breakpoints - 1 ]['value'] ) . 'px) {' . $selector . ' .client-track:not(.tns-slider) .client-slider:nth-child(n+' . strval( (int) $items['size'] + 1 ) . ') { display: none; } }';
-			$css .= '@media (max-width: ' . strval( $breakpoints[ $count_breakpoints - 1 ]['value'] ) . 'px) {' . $selector . ' .client-track:not(.tns-slider):not(:nth-child(' . strval( $items['size'] ) . ')) { margin-right: 10px; } }';
+				$css .= '@media (max-width: ' . strval( $breakpoints[ $count_breakpoints - 1 ]['value'] ) . 'px) {' . $selector . ' .client-track:not(.tns-slider) { display: flex; flex-direction: row; } }';
+				$css .= '@media (max-width: ' . strval( $breakpoints[ $count_breakpoints - 1 ]['value'] ) . 'px) {' . $selector . ' .client-track:not(.tns-slider) .client-slider { width: calc(' . strval( $items['size'] ) . ') } }';
+				$css .= '@media (max-width: ' . strval( $breakpoints[ $count_breakpoints - 1 ]['value'] ) . 'px) {' . $selector . ' .client-track:not(.tns-slider) .client-slider:nth-child(n+' . strval( (int) $items['size'] + 1 ) . ') { display: none; } }';
+				$css .= '@media (max-width: ' . strval( $breakpoints[ $count_breakpoints - 1 ]['value'] ) . 'px) {' . $selector . ' .client-track:not(.tns-slider):not(:nth-child(' . strval( $items['size'] ) . ')) { margin-right: 10px; } }';
+			}
 		}
 
 		$post_css->get_stylesheet()->add_raw_css( $css );
