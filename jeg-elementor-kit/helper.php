@@ -1772,24 +1772,53 @@ if ( ! function_exists( 'jkit_get_pricing_plan' ) ) {
 	}
 }
 
+if ( ! function_exists( 'jkit_is_event_banner_valid' ) ) {
+	/**
+	 * Check if event banner has required data.
+	 *
+	 * @param mixed  $event_banner Event banner data.
+	 * @param string $required_banner Required banner image field.
+	 *
+	 * @return bool
+	 */
+	function jkit_is_event_banner_valid( $event_banner, $required_banner = '' ) {
+		if ( empty( $event_banner ) || ( ! is_object( $event_banner ) && ! is_array( $event_banner ) ) ) {
+			return false;
+		}
+
+		$data          = is_array( $event_banner ) ? $event_banner : get_object_vars( $event_banner );
+		$banner_fields = ! empty( $required_banner ) ? array( $required_banner ) : array( 'banner', 'bannerGlobal', 'bannerLibrary', 'bannerSidePanel' );
+		$has_image     = false;
+
+		foreach ( $banner_fields as $field ) {
+			if ( ! empty( $data[ $field ] ) ) {
+				$has_image = true;
+				break;
+			}
+		}
+
+		return $has_image &&
+			! empty( $data['url'] ) &&
+			! empty( $data['expired'] );
+	}
+}
+
 if ( ! function_exists( 'jkit_get_banner_data' ) ) {
 	/**
 	 * Get Event Banner
 	 *
-	 * @param bool $ignore_closed Whether to ignore the closed transient state.
+	 * @param bool   $ignore_closed Whether to ignore the closed transient state.
+	 * @param string $required_banner Required banner image field.
 	 *
 	 * @return mixed
 	 */
-	function jkit_get_banner_data( $ignore_closed = false ) {
+	function jkit_get_banner_data( $ignore_closed = false, $required_banner = '' ) {
 		$banner_closed = get_transient( 'jkit_banner_closed' );
 		if ( $banner_closed && ! $ignore_closed ) {
 			return null;
 		}
 		$data = get_transient( 'jkit_banner_cache' );
-		if ( $data ) {
-			if ( ! $data->banner || ! $data->url || ! $data->expired ) {
-				return null;
-			}
+		if ( false !== $data && jkit_is_event_banner_valid( $data, $required_banner ) ) {
 			return $data;
 		}
 
@@ -1806,9 +1835,10 @@ if ( ! function_exists( 'jkit_get_banner_data' ) ) {
 		$body = wp_remote_retrieve_body( $response );
 		$data = json_decode( $body );
 
-		if ( ! $data->banner || ! $data->url || ! $data->expired ) {
+		if ( ! jkit_is_event_banner_valid( $data, $required_banner ) ) {
 			return null;
 		}
+
 		set_transient( 'jkit_banner_cache', $data, 3 * HOUR_IN_SECONDS );
 		return $data;
 	}

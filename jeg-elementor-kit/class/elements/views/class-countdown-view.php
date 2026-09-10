@@ -96,7 +96,7 @@ class Countdown_View extends View_Abstract {
             </div>';
 		}
 
-		return $this->render_wrapper( 'countdown', $timer, array( $separator ), $data );
+		return $this->render_wrapper( 'countdown', $timer, array( $separator ), $data ) . $this->render_template_token_script( $data );
 	}
 
 	/**
@@ -125,9 +125,29 @@ class Countdown_View extends View_Abstract {
 				$template = preg_replace( '~[\r\n\s]+~', ' ', $template );
 			}
 
-			$data['template'] = base64_encode( $template );
+			$data['template-token'] = wp_hash( $this->unique_id . '|' . $template_id . '|' . $template );
+			$data['template']       = base64_encode( $template );
 		}
 
 		return $data;
+	}
+
+	/**
+	 * Register server-rendered Countdown template instances.
+	 *
+	 * @param array $data Countdown data attributes.
+	 *
+	 * @return string
+	 */
+	private function render_template_token_script( $data ) {
+		if ( empty( $data['template-token'] ) ) {
+			return '';
+		}
+
+		$module   = wp_json_encode( $this->unique_id );
+		$template = wp_json_encode( $data['template'] );
+		$token    = wp_json_encode( $data['template-token'] );
+
+		return '<script>(window.jkitCountdownTemplates=window.jkitCountdownTemplates||{})[' . $module . ']={template:' . $template . ',token:' . $token . '};</script>';
 	}
 }

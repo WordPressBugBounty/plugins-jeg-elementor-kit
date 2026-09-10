@@ -45,6 +45,13 @@ class Api {
 	private $demo;
 
 	/**
+	 * Internal catalog data for this request only; never stored in public cache.
+	 *
+	 * @var array
+	 */
+	private $debug_demo_data = array( 'demos' => array() );
+
+	/**
 	 * Return class instance
 	 *
 	 * @return Api_Demos
@@ -1465,15 +1472,49 @@ class Api {
 	}
 
 	/**
+	 * Get the internal demo token configured on a team testing site.
+	 *
+	 * @return string
+	 */
+	private function get_demo_debug_token() {
+		if ( defined( 'JKIT_DEMO_DEBUG' ) && true === JKIT_DEMO_DEBUG && defined( 'JKIT_DEMO_DEBUG_TOKEN' ) && is_string( JKIT_DEMO_DEBUG_TOKEN ) ) {
+			return JKIT_DEMO_DEBUG_TOKEN;
+		}
+
+		return '';
+	}
+
+	/**
+	 * Add internal credentials only to configured catalog requests.
+	 *
+	 * @param array $args HTTP request arguments.
+	 * @return array
+	 */
+	private function add_demo_debug_headers( $args ) {
+		$token = $this->get_demo_debug_token();
+		if ( '' !== $token ) {
+			$args['headers']     = array( 'X-JKit-Demo-Token' => $token );
+			$args['sslverify']   = true;
+			$args['redirection'] = 0;
+		}
+
+		return $args;
+	}
+
+	/**
 	 * Fetch Data
 	 *
 	 * @return WP_Rest
 	 */
 	public function fetch_demo_data() {
+		if ( '' !== $this->get_demo_debug_token() ) {
+			$this->update_demo_data();
+			return $this->demo_data();
+		}
+
 		$demo_time = Meta::instance()->get_option( 'fetch_demo_time' );
 		$now       = time();
 
-		$demo_time = null;
 		if ( null === $demo_time || $demo_time < $now || apply_filters( 'fetch_demo_data', false ) ) {
 			if ( $this->update_demo_data() ) {
 				$next_fetch = $now + ( 24 * 60 * 60 );
@@ -1488,25 +1529,32 @@ class Api {
 	 * Update Data.
 	 */
 	public function update_demo_data() {
+		$this->debug_demo_data = array( 'demos' => array() );
 		$api_url  = JEG_ELEMENT_SERVER_URL . 'wp-json/jkit-export/v1/demo/list';
 		$args     = array(
+			'timeout'   => 30,
 			'sslverify' => false,
 			'body'      => array(
-				'debug' => essential_is_wp_debug(),
+				'debug' => '' !== $this->get_demo_debug_token() ? '1' : '0',
 			),
 		);
+		$args     = $this->add_demo_debug_headers( $args );
 		$response = wp_remote_post( $api_url, $args );
-		if ( is_wp_error( $response ) ) {
+		if ( is_wp_error( $response ) || 200 !== wp_remote_retrieve_response_code( $response ) ) {
 			return false;
 		}
 		$data = wp_remote_retrieve_body( $response );
 		$data = $this->filter_demo_data( $data );
 
-		if ( ! $data || ! isset( $data['demos'] ) || empty( $data['demos'] ) ) {
+		if ( false === $data ) {
 			return false;
 		}
 
-		Meta::instance()->set_option( 'demo_data', $data );
+		if ( '' !== $this->get_demo_debug_token() ) {
+			$this->debug_demo_data = $data;
+		} else {
+			Meta::instance()->set_option( 'demo_data', $data );
+		}
 
 		return true;
 	}
@@ -1517,7 +1565,7 @@ class Api {
 	 * @return array
 	 */
 	public function demo_data() {
-		$demo_data = Meta::instance()->get_option( 'demo_data', array() );
+		$demo_data = '' !== $this->get_demo_debug_token() ? $this->debug_demo_data : Meta::instance()->get_option( 'demo_data', array() );
 		$demo_data = $this->demo_like_filter( $demo_data );
 		$demo_data = $this->demo_imported_filter( $demo_data );
 
@@ -1586,15 +1634,30 @@ class Api {
 	/**
 	 * Update Data.
 	 *
-	 * @param array $data demo data.
-	 * @return array filtered data.
+	 * @param string $data JSON demo catalog.
+	 * @return array|false Filtered data, or false for an invalid catalog.
 	 */
 	public function filter_demo_data( $data ) {
+		if ( ! is_string( $data ) || '[' !== substr( ltrim( $data ), 0, 1 ) ) {
+			return false;
+		}
+
 		$data           = json_decode( $data, true );
 		$demos          = array();
 		$demos['demos'] = array();
-		if ( isset( $data ) ) {
+		if ( is_array( $data ) && ( empty( $data ) || array_keys( $data ) === range( 0, count( $data ) - 1 ) ) ) {
 			foreach ( $data as $demo ) {
+				if ( ! is_array( $demo ) ) {
+					return false;
+				}
+
+				$required = array( 'title', 'slug', 'cover', 'url', 'newFlag', 'demo_id', 'requirements', 'pro', 'categories', 'wordpress_req', 'file', 'demo_description', 'order' );
+				foreach ( $required as $key ) {
+					if ( ! array_key_exists( $key, $demo ) ) {
+						return false;
+					}
+				}
+
 				$demos['demos'][] = array(
 					'name' => $demo['title'],
 					'data' => array(
@@ -2557,12 +2620,14 @@ class Api {
 
 		$remote_request = wp_remote_request(
 			JEG_ELEMENT_SERVER_URL . 'wp-json/jkit-export/v1/demo/list',
-			array(
-				'method'  => 'POST',
-				'timeout' => 10,
-				'body'    => array(
-					'debug' => $request->get_param( 'debug' ),
-				),
+			$this->add_demo_debug_headers(
+				array(
+					'method'  => 'POST',
+					'timeout' => 30,
+					'body'    => array(
+						'debug' => '' !== $this->get_demo_debug_token() ? '1' : '0',
+					),
+				)
 			)
 		);
 

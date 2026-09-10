@@ -4,7 +4,7 @@ Tags: elementor, elements, addons, widgets, templates
 Requires at least: 5.0
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 3.2.16
+Stable tag: 3.2.17
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -203,6 +203,14 @@ Visit **[https://jegkit.com/](https://jegkit.com/)** for live demos, tutorials, 
 This major release introduces Mega Menu Builder, 114 demo templates, and a redesigned dashboard. Update now to explore new features and improved performance.
 
 == Changelog ==
+
+= 3.2.17 - 10-09-2026 =
+* Improvement: Security issues.
+* Improvement: Improve demo list loading and cache handling.
+* Improvement: Increase the demo catalog request timeout to 30 seconds.
+* Fix: Prevent fatal errors when the demo catalog API returns an error or invalid data.
+* Fix: Restore demo catalog caching and preserve cached demos when a refresh fails.
+* Tweak: Improve promotional banner mechanism and UTM behavior.
 
 = 3.2.16 - 03-09-2026 =
 * Improvement: Added WPML compatibility for the Post Terms widget.

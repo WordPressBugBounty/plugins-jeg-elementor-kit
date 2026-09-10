@@ -2,9 +2,24 @@
 
 This file preserves the complete changelog history that was previously kept in `readme.txt` before shortening the WordPress.org-facing `Changelog` section to stay under the 5,000-word limit.
 
-## 3.2.15 - [DEV]
+## 3.2.17 - 10-09-2026
 
-- -
+- Improvement: Security issues.
+- Improvement: Improve demo list loading and cache handling.
+- Improvement: Increase the demo catalog request timeout to 30 seconds.
+- Fix: Prevent fatal errors when the demo catalog API returns an error or invalid data.
+- Fix: Restore demo catalog caching and preserve cached demos when a refresh fails.
+- Tweak: Improve promotional banner mechanism and UTM behavior.
+
+## 3.2.16 - 03-09-2026
+
+- Improvement: Added WPML compatibility for the Post Terms widget.
+- Fix: Prevent undefined array key errors on responsive settings for Testimonial and Client Logo widgets.
+- Tweak: Add banner in pricing popup.
+
+## 3.2.15 - 26-08-2026
+
+- Improvement: Added WPML compatibility for the Post Excerpt widget.
 
 ## 3.2.14 - 20-08-2026
 

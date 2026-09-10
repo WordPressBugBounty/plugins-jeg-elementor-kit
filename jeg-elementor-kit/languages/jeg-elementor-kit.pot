@@ -7,7 +7,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language-Team: Jegtheme <support@jegtheme.com>\n"
-"POT-Creation-Date: 2026-09-03 05:52+0000\n"
+"POT-Creation-Date: 2026-09-10 14:55+0000\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -41,11 +41,11 @@ msgid "Upgrade To PRO"
 msgstr ""
 
 #. translators: 1: Plugin name, 2: Upgrade URL, 3: Additional upgrade link attributes, 4: Pricing URL, 5: Free update URL, 6: Free update label.
-#: jeg-elementor-kit/helper.php:1943
+#: jeg-elementor-kit/helper.php:1973
 msgid "A new version of %1$s is available. <strong><a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\" %3$s>Upgrade to Pro</a></strong> to unlock automatic updates premium features, widgets, templates, and priority support, or <strong><a href=\"%4$s\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"jkit-update-now-pricing\" data-continue-url=\"%5$s\" data-continue-label=\"%6$s\">update now</a></strong>."
 msgstr ""
 
-#: jeg-elementor-kit/helper.php:1971
+#: jeg-elementor-kit/helper.php:2001
 msgid "Continue Free Update"
 msgstr ""
 
@@ -57,115 +57,115 @@ msgstr ""
 msgid "It is recommended that you backup your site before updating the plugin so rollback is possible whenever needed."
 msgstr ""
 
-#: jeg-elementor-kit/class/admin/class-api.php:463, jeg-elementor-kit/class/admin/class-api.php:3096
+#: jeg-elementor-kit/class/admin/class-api.php:470, jeg-elementor-kit/class/admin/class-api.php:3161
 msgid "You are not allowed to access this endpoint."
 msgstr ""
 
-#: jeg-elementor-kit/class/admin/class-api.php:475
+#: jeg-elementor-kit/class/admin/class-api.php:482
 msgid "You are not allowed to perform this action."
 msgstr ""
 
-#: jeg-elementor-kit/class/admin/class-api.php:479
+#: jeg-elementor-kit/class/admin/class-api.php:486
 msgid "Banner closed successfully."
 msgstr ""
 
-#: jeg-elementor-kit/class/admin/class-api.php:960, jeg-elementor-kit/class/admin/class-api.php:1045, jeg-elementor-kit/class/ajax/class-ajax.php:451, jeg-elementor-kit/class/ajax/class-ajax.php:525
+#: jeg-elementor-kit/class/admin/class-api.php:967, jeg-elementor-kit/class/admin/class-api.php:1052, jeg-elementor-kit/class/ajax/class-ajax.php:451, jeg-elementor-kit/class/ajax/class-ajax.php:525
 msgid "Upgrade to Pro to create more header or footer templates."
 msgstr ""
 
-#: jeg-elementor-kit/class/admin/class-api.php:998
+#: jeg-elementor-kit/class/admin/class-api.php:1005
 msgid "Success create new template"
 msgstr ""
 
-#: jeg-elementor-kit/class/admin/class-api.php:1008, jeg-elementor-kit/class/admin/class-api.php:1076
+#: jeg-elementor-kit/class/admin/class-api.php:1015, jeg-elementor-kit/class/admin/class-api.php:1083
 msgid "Error when create new template."
 msgstr ""
 
-#: jeg-elementor-kit/class/admin/class-api.php:1066
+#: jeg-elementor-kit/class/admin/class-api.php:1073
 msgid "Success colne the template"
 msgstr ""
 
-#: jeg-elementor-kit/class/admin/class-api.php:1098
+#: jeg-elementor-kit/class/admin/class-api.php:1105
 msgid "Success delete template"
 msgstr ""
 
-#: jeg-elementor-kit/class/admin/class-api.php:1102
+#: jeg-elementor-kit/class/admin/class-api.php:1109
 msgid "Faild delete template"
 msgstr ""
 
-#: jeg-elementor-kit/class/admin/class-api.php:1149
+#: jeg-elementor-kit/class/admin/class-api.php:1156
 msgid "Success update the template"
 msgstr ""
 
-#: jeg-elementor-kit/class/admin/class-api.php:1206, jeg-elementor-kit/class/admin/class-api.php:1233
+#: jeg-elementor-kit/class/admin/class-api.php:1213, jeg-elementor-kit/class/admin/class-api.php:1240
 msgid "Success update the template priority"
 msgstr ""
 
-#: jeg-elementor-kit/class/admin/class-api.php:1250
+#: jeg-elementor-kit/class/admin/class-api.php:1257
 msgid "Success update option"
 msgstr ""
 
-#: jeg-elementor-kit/class/admin/class-api.php:1254
+#: jeg-elementor-kit/class/admin/class-api.php:1261
 msgid "Failed update option"
 msgstr ""
 
-#: jeg-elementor-kit/class/admin/class-api.php:1320, jeg-elementor-kit/class/ajax/class-ajax.php:261
+#: jeg-elementor-kit/class/admin/class-api.php:1327, jeg-elementor-kit/class/ajax/class-ajax.php:261
 msgid "API Key is Invalid."
 msgstr ""
 
-#: jeg-elementor-kit/class/admin/class-api.php:1346
+#: jeg-elementor-kit/class/admin/class-api.php:1353
 msgid "Success update API Key."
 msgstr ""
 
-#: jeg-elementor-kit/class/admin/class-api.php:1365
+#: jeg-elementor-kit/class/admin/class-api.php:1372
 msgid "Bad Request"
 msgstr ""
 
-#: jeg-elementor-kit/class/admin/class-api.php:1386, jeg-elementor-kit/class/admin/class-api.php:1400
+#: jeg-elementor-kit/class/admin/class-api.php:1393, jeg-elementor-kit/class/admin/class-api.php:1407
 msgid "Faild to subscribe the newsletter."
 msgstr ""
 
-#: jeg-elementor-kit/class/admin/class-api.php:1395
+#: jeg-elementor-kit/class/admin/class-api.php:1402
 msgid "Thank you for subscribing."
 msgstr ""
 
-#: jeg-elementor-kit/class/admin/class-api.php:1720, jeg-elementor-kit/class/admin/class-api.php:1824, jeg-elementor-kit/class/admin/class-api.php:2364, jeg-elementor-kit/class/admin/class-api.php:2399
+#: jeg-elementor-kit/class/admin/class-api.php:1783, jeg-elementor-kit/class/admin/class-api.php:1887, jeg-elementor-kit/class/admin/class-api.php:2427, jeg-elementor-kit/class/admin/class-api.php:2462
 msgid "Completed"
 msgstr ""
 
-#: jeg-elementor-kit/class/admin/class-api.php:1825
+#: jeg-elementor-kit/class/admin/class-api.php:1888
 msgid "Importing contents"
 msgstr ""
 
-#: jeg-elementor-kit/class/admin/class-api.php:1848
+#: jeg-elementor-kit/class/admin/class-api.php:1911
 msgid "This is a dummy product category from the import demo."
 msgstr ""
 
-#: jeg-elementor-kit/class/admin/class-api.php:2433, jeg-elementor-kit/class/admin/class-api.php:2992
+#: jeg-elementor-kit/class/admin/class-api.php:2496, jeg-elementor-kit/class/admin/class-api.php:3057
 msgid "Downloading images"
 msgstr ""
 
-#: jeg-elementor-kit/class/admin/class-api.php:2779
+#: jeg-elementor-kit/class/admin/class-api.php:2844
 msgid "Unable to connect to the wp_filesystem."
 msgstr ""
 
-#: jeg-elementor-kit/class/admin/class-api.php:2696, jeg-elementor-kit/class/admin/class-api.php:2795
+#: jeg-elementor-kit/class/admin/class-api.php:2761, jeg-elementor-kit/class/admin/class-api.php:2860
 msgid "Installing plugins"
 msgstr ""
 
-#: jeg-elementor-kit/class/admin/class-api.php:2880, jeg-elementor-kit/class/admin/class-api.php:2927, jeg-elementor-kit/class/admin/class-api.php:2969
+#: jeg-elementor-kit/class/admin/class-api.php:2945, jeg-elementor-kit/class/admin/class-api.php:2992, jeg-elementor-kit/class/admin/class-api.php:3034
 msgid "Post not found"
 msgstr ""
 
-#: jeg-elementor-kit/class/admin/class-api.php:2887
+#: jeg-elementor-kit/class/admin/class-api.php:2952
 msgid "Template id missing"
 msgstr ""
 
-#: jeg-elementor-kit/class/admin/class-api.php:2906
+#: jeg-elementor-kit/class/admin/class-api.php:2971
 msgid "HTTP request error: "
 msgstr ""
 
-#: jeg-elementor-kit/class/admin/class-api.php:2903
+#: jeg-elementor-kit/class/admin/class-api.php:2968
 msgid "Failed to decode JSON data."
 msgstr ""
 
@@ -183,6 +183,14 @@ msgstr ""
 
 #: jeg-elementor-kit/class/assets/class-asset.php:1445
 msgid "This file cannot be sanitized; therefore, it cannot be checked for security and cannot be uploaded for security reasons. For further inquiries, please contact Jeg Kit support."
+msgstr ""
+
+#: jeg-elementor-kit/class/banner/class-banner.php:371
+msgid "Jeg Kit event banner"
+msgstr ""
+
+#: jeg-elementor-kit/class/banner/class-banner.php:374
+msgid "Dismiss this notice."
 msgstr ""
 
 #: jeg-elementor-kit/class/dashboard/class-dashboard.php:220
