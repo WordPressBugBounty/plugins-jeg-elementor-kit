@@ -262,6 +262,7 @@
       active: true,
       parent: '',
       priority: 10,
+      raw_data: false,
     },
 
     /**
@@ -1449,6 +1450,151 @@
    * Repeater Field
    */
   api.repeaterField = api.Fields.extend({
+    getRawDataFieldKeys: function () {
+      return Object.keys(this.params.fields || {})
+    },
+
+    getRawDataValue: function () {
+      var keys = this.getRawDataFieldKeys()
+
+      return this.getValue().map(function (item) {
+        var value = {}
+
+        keys.forEach(function (key) {
+          value[key] = item && 'undefined' !== typeof item[key] ? item[key] : ''
+        })
+
+        return value
+      })
+    },
+
+    normalizeRawDataValue: function (value) {
+      var keys = this.getRawDataFieldKeys()
+
+      if (!Array.isArray(value)) {
+        throw new Error('Raw data must be a JSON array.')
+      }
+
+      return value.map(function (item, index) {
+        var normalized = {}
+
+        if ('string' === typeof item) {
+          if (1 !== keys.length) {
+            throw new Error('Item #' + (index + 1) + ' must be an object when the repeater has multiple fields.')
+          }
+
+          normalized[keys[0]] = item
+          return normalized
+        }
+
+        if (!item || 'object' !== typeof item || Array.isArray(item)) {
+          throw new Error('Item #' + (index + 1) + ' must be an object.')
+        }
+
+        Object.keys(item).forEach(function (key) {
+          if (-1 === keys.indexOf(key)) {
+            throw new Error('Item #' + (index + 1) + ' contains unknown field "' + key + '".')
+          }
+        })
+
+        keys.forEach(function (key) {
+          normalized[key] = 'undefined' !== typeof item[key] ? item[key] : ''
+        })
+
+        return normalized
+      })
+    },
+
+    applyRawDataValue: function (value) {
+      var control = this
+
+      control.repeaterFieldsContainer.empty()
+      control.rows = []
+      control.currentIndex = 0
+      control.params.value = []
+      control.setValue([], false)
+
+      value.forEach(function (item) {
+        var row = control.addRow(item)
+
+        control.initColorPicker()
+        control.initDropdownPages(row, item)
+        control.initSlider(row, item)
+      })
+
+      control.setValue(value, true, true)
+      control.element.trigger('change')
+    },
+
+    setRawDataError: function (message) {
+      this.element.find('.jeg-repeater-raw-error').text(message || '').toggle(!!message)
+    },
+
+    toggleRawData: function () {
+      var control = this
+      var rawPanel = control.element.find('.jeg-repeater-raw-panel').first()
+      var rawInput = rawPanel.find('.jeg-repeater-raw-input').first()
+      var repeaterWrapper = control.element.find('.jeg-repeater-wrapper').first()
+      var toggleButton = control.element.find('.jeg-repeater-raw-toggle').first()
+      var isRawMode = control.element.hasClass('jeg-repeater-raw-mode')
+      var rawValue
+
+      control.setRawDataError('')
+
+      if (!isRawMode) {
+        rawInput.val(JSON.stringify(control.getRawDataValue(), null, 2))
+        control.element.addClass('jeg-repeater-raw-mode')
+        toggleButton.text(toggleButton.data('repeater'))
+        repeaterWrapper.hide()
+        rawPanel.prop('hidden', false)
+        return
+      }
+
+      try {
+        rawValue = control.normalizeRawDataValue(JSON.parse(rawInput.val()))
+        control.applyRawDataValue(rawValue)
+      } catch (error) {
+        control.setRawDataError(error.message)
+        return
+      }
+
+      control.element.removeClass('jeg-repeater-raw-mode')
+      toggleButton.text(toggleButton.data('raw'))
+      rawPanel.prop('hidden', true)
+      repeaterWrapper.show()
+    },
+
+    initRawData: function () {
+      var control = this
+
+      if (!control.params.raw_data) {
+        return
+      }
+
+      control.element.on('click', '.jeg-repeater-raw-toggle', function (event) {
+        event.preventDefault()
+        control.toggleRawData()
+      })
+
+      control.element.closest('form').on('submit', function (event) {
+        var rawPanel = control.element.find('.jeg-repeater-raw-panel').first()
+        var rawInput = rawPanel.find('.jeg-repeater-raw-input').first()
+        var rawValue
+
+        if (!control.element.hasClass('jeg-repeater-raw-mode')) {
+          return
+        }
+
+        try {
+          rawValue = control.normalizeRawDataValue(JSON.parse(rawInput.val()))
+          control.applyRawDataValue(rawValue)
+        } catch (error) {
+          event.preventDefault()
+          control.setRawDataError(error.message)
+        }
+      })
+    },
+
     ready: function () {
       'use strict'
       var control = this
@@ -1549,6 +1695,8 @@
           control.sort()
         },
       })
+
+      control.initRawData()
 
     },
 

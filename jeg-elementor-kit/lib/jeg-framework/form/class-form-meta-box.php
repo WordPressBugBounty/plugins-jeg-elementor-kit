@@ -307,6 +307,7 @@ class Form_Meta_Box {
 			$this->fields[ $key ]['nonce']       = isset( $field['nonce'] ) ? $field['nonce'] : '';
 			$this->fields[ $key ]['sanitize']    = isset( $field['sanitize'] ) ? $field['sanitize'] : '';
 			$this->fields[ $key ]['mime_type']   = isset( $field['mime_type'] ) ? $field['mime_type'] : '';
+			$this->fields[ $key ]['raw_data']    = isset( $field['raw_data'] ) ? $field['raw_data'] : false;
 			$this->fields[ $key ]['single_meta'] = isset( $field['single_meta'] ) ? $field['single_meta'] : false;
 
 			if ( 'image' === $field['type'] ) {

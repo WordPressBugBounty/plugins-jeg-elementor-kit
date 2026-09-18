@@ -126,6 +126,7 @@ class Form_Menu {
 			$setting[ $key ]['value']       = isset( $field['value'] ) ? $field['value'] : null;
 			$setting[ $key ]['ajax']        = isset( $field['ajax'] ) ? $field['ajax'] : '';
 			$setting[ $key ]['nonce']       = isset( $field['nonce'] ) ? $field['nonce'] : '';
+			$setting[ $key ]['raw_data']    = isset( $field['raw_data'] ) ? $field['raw_data'] : false;
 		}
 
 		return $setting;

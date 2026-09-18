@@ -818,6 +818,26 @@
     width: 100px;
 }
 
+.jeg-repeater-raw-toggle {
+    margin-top: 10px;
+}
+
+.jeg-repeater-raw-panel {
+    margin-top: 14px;
+}
+
+.jeg-repeater-raw-input {
+    font-family: Consolas, Monaco, monospace;
+    min-height: 260px;
+    white-space: pre;
+}
+
+.jeg-repeater-raw-error {
+    color: #b32d2e;
+    font-weight: 600;
+    margin: 8px 0 0;
+}
+
 .jeg-repeater-wrapper .jeg-image-attachment  {
     padding: 20px 0;
     margin: 0;

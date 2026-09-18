@@ -7,7 +7,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language-Team: Jegtheme <support@jegtheme.com>\n"
-"POT-Creation-Date: 2026-09-10 14:55+0000\n"
+"POT-Creation-Date: 2026-09-18 03:46+0000\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -693,375 +693,375 @@ msgstr ""
 msgid "Box Shadow"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:61
+#: jeg-elementor-kit/class/integrations/class-wpml.php:62
 msgid "Jeg Kit Icon Box: Icon Box: Title"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:62
+#: jeg-elementor-kit/class/integrations/class-wpml.php:63
 msgid "Jeg Kit Icon Box: Icon Box: Description"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:63
+#: jeg-elementor-kit/class/integrations/class-wpml.php:64
 msgid "Jeg Kit Icon Box: Read More: Button Label"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:64
+#: jeg-elementor-kit/class/integrations/class-wpml.php:65
 msgid "Jeg Kit Icon Box: Badge: Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:72
+#: jeg-elementor-kit/class/integrations/class-wpml.php:73
 msgid "Jeg Kit Off Canvas: Setting: Open Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:80
+#: jeg-elementor-kit/class/integrations/class-wpml.php:81
 msgid "Jeg Kit Search: Search: Placeholder"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:81
+#: jeg-elementor-kit/class/integrations/class-wpml.php:82
 msgid "Jeg Kit Search: Search: Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:89
+#: jeg-elementor-kit/class/integrations/class-wpml.php:90
 msgid "Jeg Kit Nav Menu: Mobile Menu: Custom Link"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:97
+#: jeg-elementor-kit/class/integrations/class-wpml.php:98
 msgid "Jeg Kit Progress Bar: Progress Bar: Title"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:105
+#: jeg-elementor-kit/class/integrations/class-wpml.php:106
 msgid "Jeg Kit Countdown: Content: Day Label"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:106
+#: jeg-elementor-kit/class/integrations/class-wpml.php:107
 msgid "Jeg Kit Countdown: Content: Hour Label"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:107
+#: jeg-elementor-kit/class/integrations/class-wpml.php:108
 msgid "Jeg Kit Countdown: Content: Minute Label"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:108
+#: jeg-elementor-kit/class/integrations/class-wpml.php:109
 msgid "Jeg Kit Countdown: Content: Second Label"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:109
+#: jeg-elementor-kit/class/integrations/class-wpml.php:110
 msgid "Jeg Kit Countdown: Expired Action: Title"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:110
+#: jeg-elementor-kit/class/integrations/class-wpml.php:111
 msgid "Jeg Kit Countdown: Expired Action: Content"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:111
+#: jeg-elementor-kit/class/integrations/class-wpml.php:112
 msgid "Jeg Kit Countdown: Expired Action: Redirect Link"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:119
+#: jeg-elementor-kit/class/integrations/class-wpml.php:120
 msgid "Jeg Kit Dual Button: Dual Button: Middle Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:120
+#: jeg-elementor-kit/class/integrations/class-wpml.php:121
 msgid "Jeg Kit Dual Button: Button One: Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:121
+#: jeg-elementor-kit/class/integrations/class-wpml.php:122
 msgid "Jeg Kit Dual Button: Button One: Link"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:122
+#: jeg-elementor-kit/class/integrations/class-wpml.php:123
 msgid "Jeg Kit Dual Button: Button Two: Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:123
+#: jeg-elementor-kit/class/integrations/class-wpml.php:124
 msgid "Jeg Kit Dual Button: Button Two: Link"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:131
+#: jeg-elementor-kit/class/integrations/class-wpml.php:132
 msgid "Jeg Kit Video Button: Video: Button Title"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:132
+#: jeg-elementor-kit/class/integrations/class-wpml.php:133
 msgid "Jeg Kit Video Button: Video: Video URL"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:140
+#: jeg-elementor-kit/class/integrations/class-wpml.php:141
 msgid "Jeg Kit Mailchimp: Form: First Name Label"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:141
+#: jeg-elementor-kit/class/integrations/class-wpml.php:142
 msgid "Jeg Kit Mailchimp: Form: First Name Placeholder"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:142
+#: jeg-elementor-kit/class/integrations/class-wpml.php:143
 msgid "Jeg Kit Mailchimp: Form: Last Name Label"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:143
+#: jeg-elementor-kit/class/integrations/class-wpml.php:144
 msgid "Jeg Kit Mailchimp: Form: Last Name Placeholder"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:144
+#: jeg-elementor-kit/class/integrations/class-wpml.php:145
 msgid "Jeg Kit Mailchimp: Form: Phone Label"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:145
+#: jeg-elementor-kit/class/integrations/class-wpml.php:146
 msgid "Jeg Kit Mailchimp: Form: Phone Placeholder"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:146
+#: jeg-elementor-kit/class/integrations/class-wpml.php:147
 msgid "Jeg Kit Mailchimp: Form: Email Label"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:147
+#: jeg-elementor-kit/class/integrations/class-wpml.php:148
 msgid "Jeg Kit Mailchimp: Form: Email Placeholder"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:148
+#: jeg-elementor-kit/class/integrations/class-wpml.php:149
 msgid "Jeg Kit Mailchimp: Form: Button Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:149
+#: jeg-elementor-kit/class/integrations/class-wpml.php:150
 msgid "Jeg Kit Mailchimp: Form: Success Message"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:157
+#: jeg-elementor-kit/class/integrations/class-wpml.php:158
 msgid "Jeg Kit Banner: Banner: Title"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:158
+#: jeg-elementor-kit/class/integrations/class-wpml.php:159
 msgid "Jeg Kit Banner: Banner: Subtitle"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:159
+#: jeg-elementor-kit/class/integrations/class-wpml.php:160
 msgid "Jeg Kit Banner: Banner: Description"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:160
+#: jeg-elementor-kit/class/integrations/class-wpml.php:161
 msgid "Jeg Kit Banner: Button: Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:161
+#: jeg-elementor-kit/class/integrations/class-wpml.php:162
 msgid "Jeg Kit Banner: Button: Link"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:162
+#: jeg-elementor-kit/class/integrations/class-wpml.php:163
 msgid "Jeg Kit Banner: Box Sale: Before Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:163
+#: jeg-elementor-kit/class/integrations/class-wpml.php:164
 msgid "Jeg Kit Banner: Box Sale: Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:164
+#: jeg-elementor-kit/class/integrations/class-wpml.php:165
 msgid "Jeg Kit Banner: Box Sale: Unit"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:193
+#: jeg-elementor-kit/class/integrations/class-wpml.php:201
 msgid "Jeg Kit Heading: Title: Before Focused Title"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:194
+#: jeg-elementor-kit/class/integrations/class-wpml.php:202
 msgid "Jeg Kit Heading: Title: Focused Title"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:195
+#: jeg-elementor-kit/class/integrations/class-wpml.php:203
 msgid "Jeg Kit Heading: Title: After Focused Title"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:196
+#: jeg-elementor-kit/class/integrations/class-wpml.php:204
 msgid "Jeg Kit Heading: Title: Highlight Title"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:197
+#: jeg-elementor-kit/class/integrations/class-wpml.php:205
 msgid "Jeg Kit Heading: Subtitle: Heading Sub Title"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:198
+#: jeg-elementor-kit/class/integrations/class-wpml.php:206
 msgid "Jeg Kit Heading: Description: Heading Description"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:199
+#: jeg-elementor-kit/class/integrations/class-wpml.php:207
 msgid "Jeg Kit Heading: Shadow Text: Content"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:207
+#: jeg-elementor-kit/class/integrations/class-wpml.php:215
 msgid "Jeg Kit Image Box: Image: Link"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:208
+#: jeg-elementor-kit/class/integrations/class-wpml.php:216
 msgid "Jeg Kit Image Box: Body: Title"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:209
+#: jeg-elementor-kit/class/integrations/class-wpml.php:217
 msgid "Jeg Kit Image Box: Body: Description"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:210
+#: jeg-elementor-kit/class/integrations/class-wpml.php:218
 msgid "Jeg Kit Image Box: Button: Label"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:211
+#: jeg-elementor-kit/class/integrations/class-wpml.php:219
 msgid "Jeg Kit Image Box: Button: Link"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:219
+#: jeg-elementor-kit/class/integrations/class-wpml.php:227
 msgid "Jeg Kit Button: Content: Label"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:220
+#: jeg-elementor-kit/class/integrations/class-wpml.php:228
 msgid "Jeg Kit Button: Content: Link"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:221
+#: jeg-elementor-kit/class/integrations/class-wpml.php:229
 msgid "Jeg Kit Button: Content: Class"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:222
+#: jeg-elementor-kit/class/integrations/class-wpml.php:230
 msgid "Jeg Kit Button: Content: ID"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:230
+#: jeg-elementor-kit/class/integrations/class-wpml.php:238
 msgid "Jeg Kit Animated Text: Text: Before Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:231
+#: jeg-elementor-kit/class/integrations/class-wpml.php:239
 msgid "Jeg Kit Animated Text: Text: Animated Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:232
+#: jeg-elementor-kit/class/integrations/class-wpml.php:240
 msgid "Jeg Kit Animated Text: Text: After Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:241
+#: jeg-elementor-kit/class/integrations/class-wpml.php:249
 msgid "Jeg Kit Pie Chart: Content: Title"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:242
+#: jeg-elementor-kit/class/integrations/class-wpml.php:250
 msgid "Jeg Kit Pie Chart: Content: Description"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:250
+#: jeg-elementor-kit/class/integrations/class-wpml.php:258
 msgid "Jeg Kit Fun Fact: Content: Number Prefix"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:251
+#: jeg-elementor-kit/class/integrations/class-wpml.php:259
 msgid "Jeg Kit Fun Fact: Content: Number"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:252
+#: jeg-elementor-kit/class/integrations/class-wpml.php:260
 msgid "Jeg Kit Fun Fact: Content: Number Suffix"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:253
+#: jeg-elementor-kit/class/integrations/class-wpml.php:261
 msgid "Jeg Kit Fun Fact: Content: Title"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:254
+#: jeg-elementor-kit/class/integrations/class-wpml.php:262
 msgid "Jeg Kit Fun Fact: Content: Super"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:262
+#: jeg-elementor-kit/class/integrations/class-wpml.php:270
 msgid "Jeg Kit Team: Team Member: Member Name"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:263
+#: jeg-elementor-kit/class/integrations/class-wpml.php:271
 msgid "Jeg Kit Team: Team Member: Position"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:264
+#: jeg-elementor-kit/class/integrations/class-wpml.php:272
 msgid "Jeg Kit Team: Team Member: Description"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:265
+#: jeg-elementor-kit/class/integrations/class-wpml.php:273
 msgid "Jeg Kit Team: Team Member: Phone"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:266
+#: jeg-elementor-kit/class/integrations/class-wpml.php:274
 msgid "Jeg Kit Team: Team Member: Email"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:274
+#: jeg-elementor-kit/class/integrations/class-wpml.php:282
 msgid "Jeg Kit Post Block: Content Setting: Excerpt More"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:275
+#: jeg-elementor-kit/class/integrations/class-wpml.php:283
 msgid "Jeg Kit Post Block: Content Setting: Read More Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:276
+#: jeg-elementor-kit/class/integrations/class-wpml.php:284
 msgid "Jeg Kit Post Block: Content Setting: Meta Author \"by\" Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:277
+#: jeg-elementor-kit/class/integrations/class-wpml.php:285
 msgid "Jeg Kit Post Block: Content Setting: Post Date Custom Format"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:278
+#: jeg-elementor-kit/class/integrations/class-wpml.php:286
 msgid "Jeg Kit Post Block: Pagination: Previous Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:279
+#: jeg-elementor-kit/class/integrations/class-wpml.php:287
 msgid "Jeg Kit Post Block: Pagination: Next Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:280
+#: jeg-elementor-kit/class/integrations/class-wpml.php:288
 msgid "Jeg Kit Post Block: Pagination: Load More Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:281
+#: jeg-elementor-kit/class/integrations/class-wpml.php:289
 msgid "Jeg Kit Post Block: Pagination: Loading Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:289
+#: jeg-elementor-kit/class/integrations/class-wpml.php:297
 msgid "Jeg Kit Post List: Content Setting: Post Date Custom Format"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:290
+#: jeg-elementor-kit/class/integrations/class-wpml.php:298
 msgid "Jeg Kit Post List: Pagination: Previous Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:291
+#: jeg-elementor-kit/class/integrations/class-wpml.php:299
 msgid "Jeg Kit Post List: Pagination: Next Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:292
+#: jeg-elementor-kit/class/integrations/class-wpml.php:300
 msgid "Jeg Kit Post List: Pagination: Load More Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:293
+#: jeg-elementor-kit/class/integrations/class-wpml.php:301
 msgid "Jeg Kit Post List: Pagination: Loading Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:294
+#: jeg-elementor-kit/class/integrations/class-wpml.php:302
 msgid "Jeg Kit Post List: No Content: Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:302
+#: jeg-elementor-kit/class/integrations/class-wpml.php:310
 msgid "Jeg Kit Post Date: Date: Custom Format"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:303
+#: jeg-elementor-kit/class/integrations/class-wpml.php:311
 msgid "Jeg Kit Post Date: Date: Custom Link"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:311
+#: jeg-elementor-kit/class/integrations/class-wpml.php:319
 msgid "Jeg Kit Post Author: Author: Custom Link"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:319
+#: jeg-elementor-kit/class/integrations/class-wpml.php:327
 msgid "Jeg Kit Post Title: Title: Custom Link"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:327
+#: jeg-elementor-kit/class/integrations/class-wpml.php:335
 msgid "Jeg Kit Post Featured Image: Image: Custom Link"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:335
+#: jeg-elementor-kit/class/integrations/class-wpml.php:343
 msgid "Jeg Kit Post Excerpt: Excerpt: Custom Link"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:343
+#: jeg-elementor-kit/class/integrations/class-wpml.php:351
 msgid "Jeg Kit Post Terms: Terms: Separator"
 msgstr ""
 
@@ -5864,6 +5864,10 @@ msgstr ""
 msgid "Jeg Kit Portfolio Gallery: Gallery: View More Text"
 msgstr ""
 
+#: jeg-elementor-kit/class/integrations/wpml/class-social-share-module.php:44
+msgid "Jeg Kit Social Share: Social Media: Label"
+msgstr ""
+
 #: jeg-elementor-kit/class/integrations/wpml/class-testimonials-module.php:44
 msgid "Jeg Kit Testimonials: Testimonials: Client Name"
 msgstr ""
@@ -6099,39 +6103,39 @@ msgstr ""
 msgid "Limit: %s rows"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-framework/customizer/control/class-repeater.php:370, jeg-elementor-kit/lib/jeg-framework/form/field/class-repeater.php:181
+#: jeg-elementor-kit/lib/jeg-framework/customizer/control/class-repeater.php:370, jeg-elementor-kit/lib/jeg-framework/form/field/class-repeater.php:191
 msgid "Hex Value"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-framework/customizer/control/class-repeater.php:395, jeg-elementor-kit/lib/jeg-framework/customizer/control/class-repeater.php:400, jeg-elementor-kit/lib/jeg-framework/form/field/class-repeater.php:206, jeg-elementor-kit/lib/jeg-framework/form/field/class-repeater.php:211
+#: jeg-elementor-kit/lib/jeg-framework/customizer/control/class-repeater.php:395, jeg-elementor-kit/lib/jeg-framework/customizer/control/class-repeater.php:400, jeg-elementor-kit/lib/jeg-framework/form/field/class-repeater.php:216, jeg-elementor-kit/lib/jeg-framework/form/field/class-repeater.php:221
 msgid "No Image Selected"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-framework/customizer/control/class-repeater.php:405, jeg-elementor-kit/lib/jeg-framework/customizer/control/class-repeater.php:441, jeg-elementor-kit/lib/jeg-framework/form/field/class-repeater.php:216, jeg-elementor-kit/lib/jeg-framework/form/field/class-repeater.php:252, jeg-elementor-kit/lib/jeg-framework/form/field/class-upload.php:47
+#: jeg-elementor-kit/lib/jeg-framework/customizer/control/class-repeater.php:405, jeg-elementor-kit/lib/jeg-framework/customizer/control/class-repeater.php:441, jeg-elementor-kit/lib/jeg-framework/form/field/class-repeater.php:226, jeg-elementor-kit/lib/jeg-framework/form/field/class-repeater.php:262, jeg-elementor-kit/lib/jeg-framework/form/field/class-upload.php:47
 msgid "Remove"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-framework/customizer/control/class-repeater.php:406, jeg-elementor-kit/lib/jeg-framework/customizer/control/class-repeater.php:410, jeg-elementor-kit/lib/jeg-framework/form/field/class-image.php:58, jeg-elementor-kit/lib/jeg-framework/form/field/class-repeater.php:217, jeg-elementor-kit/lib/jeg-framework/form/field/class-repeater.php:221
+#: jeg-elementor-kit/lib/jeg-framework/customizer/control/class-repeater.php:406, jeg-elementor-kit/lib/jeg-framework/customizer/control/class-repeater.php:410, jeg-elementor-kit/lib/jeg-framework/form/field/class-image.php:58, jeg-elementor-kit/lib/jeg-framework/form/field/class-repeater.php:227, jeg-elementor-kit/lib/jeg-framework/form/field/class-repeater.php:231
 msgid "Add Image"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-framework/customizer/control/class-repeater.php:406, jeg-elementor-kit/lib/jeg-framework/customizer/control/class-repeater.php:408, jeg-elementor-kit/lib/jeg-framework/form/field/class-repeater.php:217, jeg-elementor-kit/lib/jeg-framework/form/field/class-repeater.php:219
+#: jeg-elementor-kit/lib/jeg-framework/customizer/control/class-repeater.php:406, jeg-elementor-kit/lib/jeg-framework/customizer/control/class-repeater.php:408, jeg-elementor-kit/lib/jeg-framework/form/field/class-repeater.php:227, jeg-elementor-kit/lib/jeg-framework/form/field/class-repeater.php:229
 msgid "Change Image"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-framework/customizer/control/class-repeater.php:431, jeg-elementor-kit/lib/jeg-framework/customizer/control/class-repeater.php:436, jeg-elementor-kit/lib/jeg-framework/form/field/class-repeater.php:242, jeg-elementor-kit/lib/jeg-framework/form/field/class-repeater.php:247, jeg-elementor-kit/lib/jeg-framework/form/field/class-upload.php:37, jeg-elementor-kit/lib/jeg-framework/form/field/class-upload.php:42
+#: jeg-elementor-kit/lib/jeg-framework/customizer/control/class-repeater.php:431, jeg-elementor-kit/lib/jeg-framework/customizer/control/class-repeater.php:436, jeg-elementor-kit/lib/jeg-framework/form/field/class-repeater.php:252, jeg-elementor-kit/lib/jeg-framework/form/field/class-repeater.php:257, jeg-elementor-kit/lib/jeg-framework/form/field/class-upload.php:37, jeg-elementor-kit/lib/jeg-framework/form/field/class-upload.php:42
 msgid "No File Selected"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-framework/customizer/control/class-repeater.php:442, jeg-elementor-kit/lib/jeg-framework/customizer/control/class-repeater.php:446, jeg-elementor-kit/lib/jeg-framework/form/field/class-repeater.php:253, jeg-elementor-kit/lib/jeg-framework/form/field/class-repeater.php:257, jeg-elementor-kit/lib/jeg-framework/form/field/class-upload.php:48, jeg-elementor-kit/lib/jeg-framework/form/field/class-upload.php:52
+#: jeg-elementor-kit/lib/jeg-framework/customizer/control/class-repeater.php:442, jeg-elementor-kit/lib/jeg-framework/customizer/control/class-repeater.php:446, jeg-elementor-kit/lib/jeg-framework/form/field/class-repeater.php:263, jeg-elementor-kit/lib/jeg-framework/form/field/class-repeater.php:267, jeg-elementor-kit/lib/jeg-framework/form/field/class-upload.php:48, jeg-elementor-kit/lib/jeg-framework/form/field/class-upload.php:52
 msgid "Add File"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-framework/customizer/control/class-repeater.php:442, jeg-elementor-kit/lib/jeg-framework/customizer/control/class-repeater.php:444, jeg-elementor-kit/lib/jeg-framework/form/field/class-repeater.php:253, jeg-elementor-kit/lib/jeg-framework/form/field/class-repeater.php:255, jeg-elementor-kit/lib/jeg-framework/form/field/class-upload.php:48, jeg-elementor-kit/lib/jeg-framework/form/field/class-upload.php:50
+#: jeg-elementor-kit/lib/jeg-framework/customizer/control/class-repeater.php:442, jeg-elementor-kit/lib/jeg-framework/customizer/control/class-repeater.php:444, jeg-elementor-kit/lib/jeg-framework/form/field/class-repeater.php:263, jeg-elementor-kit/lib/jeg-framework/form/field/class-repeater.php:265, jeg-elementor-kit/lib/jeg-framework/form/field/class-upload.php:48, jeg-elementor-kit/lib/jeg-framework/form/field/class-upload.php:50
 msgid "Change File"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-framework/customizer/control/class-repeater.php:460, jeg-elementor-kit/lib/jeg-framework/form/field/class-repeater.php:284
+#: jeg-elementor-kit/lib/jeg-framework/customizer/control/class-repeater.php:460, jeg-elementor-kit/lib/jeg-framework/form/field/class-repeater.php:294
 msgid "delete"
 msgstr ""
 
@@ -6145,6 +6149,18 @@ msgstr ""
 
 #: jeg-elementor-kit/lib/jeg-framework/form/field/class-image.php:60
 msgid "Remove Image"
+msgstr ""
+
+#: jeg-elementor-kit/lib/jeg-framework/form/field/class-repeater.php:47, jeg-elementor-kit/lib/jeg-framework/form/field/class-repeater.php:47
+msgid "Raw Data"
+msgstr ""
+
+#: jeg-elementor-kit/lib/jeg-framework/form/field/class-repeater.php:47
+msgid "Repeater"
+msgstr ""
+
+#: jeg-elementor-kit/lib/jeg-framework/form/field/class-repeater.php:59
+msgid "Edit JSON, then toggle back to update the repeater."
 msgstr ""
 
 #: jeg-elementor-kit/lib/jeg-element/includes/class/divi/class-divi-builder-abstract.php:106

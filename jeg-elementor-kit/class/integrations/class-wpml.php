@@ -10,6 +10,7 @@ namespace Jeg\Elementor_Kit\Integrations;
 use Jeg\Elementor_Kit\Integrations\WPML\Accordion_Module;
 use Jeg\Elementor_Kit\Integrations\WPML\Animated_Text_Module;
 use Jeg\Elementor_Kit\Integrations\WPML\Portfolio_Gallery_Module;
+use Jeg\Elementor_Kit\Integrations\WPML\Social_Share_Module;
 use Jeg\Elementor_Kit\Integrations\WPML\Testimonials_Module;
 
 /**
@@ -163,6 +164,13 @@ class WPML {
 				$this->field( 'sg_box_sale_text', __( 'Jeg Kit Banner: Box Sale: Text', 'jeg-elementor-kit' ) ),
 				$this->field( 'sg_box_sale_unit', __( 'Jeg Kit Banner: Box Sale: Unit', 'jeg-elementor-kit' ) ),
 			),
+		);
+
+		/** Jeg Kit - Social Share Widget */
+		$widgets['jkit_social_share'] = array(
+			'conditions'        => array( 'widgetType' => 'jkit_social_share' ),
+			'fields'            => array(),
+			'integration-class' => Social_Share_Module::class,
 		);
 
 		/** Jeg Kit - Accordion Widget */
@@ -359,6 +367,7 @@ class WPML {
 		require_once JEG_ELEMENTOR_KIT_DIR . 'class/integrations/wpml/class-portfolio-gallery-module.php';
 		require_once JEG_ELEMENTOR_KIT_DIR . 'class/integrations/wpml/class-testimonials-module.php';
 		require_once JEG_ELEMENTOR_KIT_DIR . 'class/integrations/wpml/class-animated-text-module.php';
+		require_once JEG_ELEMENTOR_KIT_DIR . 'class/integrations/wpml/class-social-share-module.php';
 	}
 
 	/**

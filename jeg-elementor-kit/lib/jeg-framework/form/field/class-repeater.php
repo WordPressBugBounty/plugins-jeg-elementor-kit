@@ -43,6 +43,9 @@ class Repeater extends Field_Abstract {
 			<div class="widget-wrapper-top">
 				<label for="{{ data.fieldID }}">{{{ data.title }}}</label>
 				<i>{{{ data.description }}}</i>
+				<# if ( data.raw_data ) { #>
+					<button type="button" class="button jeg-repeater-raw-toggle" data-raw="<?php esc_attr_e( 'Raw Data', 'jeg-elementor-kit' ); ?>" data-repeater="<?php esc_attr_e( 'Repeater', 'jeg-elementor-kit' ); ?>"><?php esc_html_e( 'Raw Data', 'jeg-elementor-kit' ); ?></button>
+				<# } #>
 			</div>
 			<div class="jeg-repeater-wrapper">
 				<ul class="repeater-fields"></ul>
@@ -50,6 +53,13 @@ class Repeater extends Field_Abstract {
 					<button type="button" class="button button-large button-primary repeater-add"><i class="fa fa-plus"></i></button>
 				</div>
 			</div>
+			<# if ( data.raw_data ) { #>
+				<div class="jeg-repeater-raw-panel" hidden>
+					<textarea class="widefat code jeg-repeater-raw-input" rows="14" spellcheck="false"></textarea>
+					<p class="description"><?php esc_html_e( 'Edit JSON, then toggle back to update the repeater.', 'jeg-elementor-kit' ); ?></p>
+					<p class="jeg-repeater-raw-error" role="alert"></p>
+				</div>
+			<# } #>
 			<# var value = ( 'object' === typeof data.value ) ? JSON.stringify(data.value) : data.value; #>
 			<input class="widefat data-setting" id="{{ data.fieldID }}" name="{{ data.fieldName }}" type="hidden" value="{{ value }}" />
 		</div>

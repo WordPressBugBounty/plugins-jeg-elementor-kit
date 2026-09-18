@@ -1,4 +1,5 @@
 === 1.3.4 - [DEV] ==
+- [IMPROVEMENT] Add opt-in raw data editor support for repeater fields
 - [BUG] Fix conflict with JNews style generator on customizer
 - [BUG] Fix Repeater Control, prevent submit and handle legacy string values
 
@@ -59,4 +60,3 @@
 - Better handling for active callback (active callback not depend on page refresh)
 - Style Generator for Customizer Control
 - Redirect page when control changed
-
