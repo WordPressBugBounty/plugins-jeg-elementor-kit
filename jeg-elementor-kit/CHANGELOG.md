@@ -2,6 +2,11 @@
 
 This file preserves the complete changelog history that was previously kept in `readme.txt` before shortening the WordPress.org-facing `Changelog` section to stay under the 5,000-word limit.
 
+## 3.2.19 - 24-09-2026
+
+* Improvement: SVG Icon Style Size on Icon Box widget.
+* Improvement: Added WPML compatibility for the Client Logo widget.
+
 ## 3.2.18 - 18-09-2026
 
 * Improvement: Update bundled Jeg Framework with opt-in raw data editor support for repeater fields.

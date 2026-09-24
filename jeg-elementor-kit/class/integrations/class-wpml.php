@@ -9,6 +9,7 @@ namespace Jeg\Elementor_Kit\Integrations;
 
 use Jeg\Elementor_Kit\Integrations\WPML\Accordion_Module;
 use Jeg\Elementor_Kit\Integrations\WPML\Animated_Text_Module;
+use Jeg\Elementor_Kit\Integrations\WPML\Client_Logo_Module;
 use Jeg\Elementor_Kit\Integrations\WPML\Portfolio_Gallery_Module;
 use Jeg\Elementor_Kit\Integrations\WPML\Social_Share_Module;
 use Jeg\Elementor_Kit\Integrations\WPML\Testimonials_Module;
@@ -97,6 +98,13 @@ class WPML {
 			'fields'     => array(
 				$this->field( 'sg_progress_title', __( 'Jeg Kit Progress Bar: Progress Bar: Title', 'jeg-elementor-kit' ) ),
 			),
+		);
+
+		/** Jeg Kit - Client Logo Widget */
+		$widgets['jkit_client_logo'] = array(
+			'conditions'        => array( 'widgetType' => 'jkit_client_logo' ),
+			'fields'            => array(),
+			'integration-class' => Client_Logo_Module::class,
 		);
 
 		/** Jeg Kit - Countdown Widget */
@@ -368,6 +376,7 @@ class WPML {
 		require_once JEG_ELEMENTOR_KIT_DIR . 'class/integrations/wpml/class-testimonials-module.php';
 		require_once JEG_ELEMENTOR_KIT_DIR . 'class/integrations/wpml/class-animated-text-module.php';
 		require_once JEG_ELEMENTOR_KIT_DIR . 'class/integrations/wpml/class-social-share-module.php';
+		require_once JEG_ELEMENTOR_KIT_DIR . 'class/integrations/wpml/class-client-logo-module.php';
 	}
 
 	/**
