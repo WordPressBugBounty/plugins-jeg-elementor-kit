@@ -3,7 +3,7 @@
         'name' => 'jegstudio/jeg-elementor-kit',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '6216ae2f57e3c856fca86f5202aef577161d225f',
+        'reference' => '7ff79ef634450ff9e44b48c599ab35e23c97d1f8',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -31,7 +31,7 @@
         'jegstudio/jeg-elementor-kit' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '6216ae2f57e3c856fca86f5202aef577161d225f',
+            'reference' => '7ff79ef634450ff9e44b48c599ab35e23c97d1f8',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

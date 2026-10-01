@@ -136,6 +136,16 @@ class Api {
 
 		register_rest_route(
 			self::ENDPOINT,
+			'lemon-checkout-url',
+			array(
+				'methods'             => 'POST',
+				'callback'            => array( $this, 'lemon_checkout_url_proxy_handler' ),
+				'permission_callback' => array( $this, 'utm_permission_check' ),
+			)
+		);
+
+		register_rest_route(
+			self::ENDPOINT,
 			'updateMailChimp',
 			array(
 				'methods'             => 'POST',
@@ -453,6 +463,7 @@ class Api {
 				'pricingPlan' => jkit_get_pricing_plan(),
 				'imgDir'      => JEG_ELEMENTOR_KIT_URL . '/assets/img/',
 				'wpRestNonce' => wp_create_nonce( 'wp_rest' ),
+				'proServerUrl' => defined( 'JEG_ELEMENT_PRO_SERVER_URL' ) ? esc_url( JEG_ELEMENT_PRO_SERVER_URL ) : '',
 			)
 		);
 	}
@@ -3135,6 +3146,57 @@ class Api {
 
 		// try decode JSON, otherwise return raw body
 		$decoded = json_decode( $resp_body, true );
+
+		return new \WP_REST_Response( $decoded ?: $resp_body, $code );
+	}
+
+	/**
+	 * Proxy handler that requests a Lemon Squeezy checkout URL from the pro server.
+	 *
+	 * @param \WP_REST_Request $request Request object.
+	 * @return \WP_REST_Response
+	 */
+	public function lemon_checkout_url_proxy_handler( $request ) {		
+		$variant_id = sanitize_text_field( $request->get_param( 'variant_id' ) );
+		$tracker_id = sanitize_text_field( $request->get_param( 'tracker_id' ) );
+		$coupon_code = sanitize_text_field( $request->get_param( 'coupon_code' ) );
+
+		if ( empty( $variant_id ) ) {
+			return $this->response_error( esc_html__( 'Variant ID is required.', 'jeg-elementor-kit' ), 400 );
+		}
+
+		$pro_server_url = defined( 'JEG_ELEMENT_PRO_SERVER_URL' ) ? JEG_ELEMENT_PRO_SERVER_URL : 'https://pro.jegkit.com';
+		$endpoint       = trailingslashit( untrailingslashit( $pro_server_url ) ) . 'wp-json/jeg-kit-license/v1/lemon-squeezy/checkout-url/';
+		$body           = array(
+			'variant_id' => $variant_id,
+		);
+
+		if ( ! empty( $tracker_id ) ) {
+			$body['tracker_id'] = $tracker_id;
+		}
+
+		if ( ! empty( $coupon_code ) ) {
+			$body['coupon_code'] = $coupon_code;
+		}
+
+		$remote = wp_remote_post(
+			$endpoint,
+			array(
+				'body'      => wp_json_encode( $body ),
+				'headers'   => array(
+					'Content-Type' => 'application/json',
+				),
+				'timeout'   => 10,
+			)
+		);
+
+		if ( is_wp_error( $remote ) ) {
+			return $this->response_error( $remote->get_error_message(), 502 );
+		}
+
+		$code      = wp_remote_retrieve_response_code( $remote );
+		$resp_body = wp_remote_retrieve_body( $remote );
+		$decoded   = json_decode( $resp_body, true );
 
 		return new \WP_REST_Response( $decoded ?: $resp_body, $code );
 	}

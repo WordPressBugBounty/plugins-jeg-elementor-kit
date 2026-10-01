@@ -2,6 +2,12 @@
 
 This file preserves the complete changelog history that was previously kept in `readme.txt` before shortening the WordPress.org-facing `Changelog` section to stay under the 5,000-word limit.
 
+## 3.2.20 - 01-10-2026
+
+* Improvement: Security issues.
+* Improvement: Added WPML compatibility for the Feature List and Tabs widgets.
+* Fix: Uncaught TypeError issues on editor support script in Elementor Editor.
+
 ## 3.2.19 - 24-09-2026
 
 * Improvement: SVG Icon Style Size on Icon Box widget.

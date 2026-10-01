@@ -10,8 +10,10 @@ namespace Jeg\Elementor_Kit\Integrations;
 use Jeg\Elementor_Kit\Integrations\WPML\Accordion_Module;
 use Jeg\Elementor_Kit\Integrations\WPML\Animated_Text_Module;
 use Jeg\Elementor_Kit\Integrations\WPML\Client_Logo_Module;
+use Jeg\Elementor_Kit\Integrations\WPML\Feature_List_Module;
 use Jeg\Elementor_Kit\Integrations\WPML\Portfolio_Gallery_Module;
 use Jeg\Elementor_Kit\Integrations\WPML\Social_Share_Module;
+use Jeg\Elementor_Kit\Integrations\WPML\Tabs_Module;
 use Jeg\Elementor_Kit\Integrations\WPML\Testimonials_Module;
 
 /**
@@ -105,6 +107,20 @@ class WPML {
 			'conditions'        => array( 'widgetType' => 'jkit_client_logo' ),
 			'fields'            => array(),
 			'integration-class' => Client_Logo_Module::class,
+		);
+
+		/** Jeg Kit - Feature List Widget */
+		$widgets['jkit_feature_list'] = array(
+			'conditions'        => array( 'widgetType' => 'jkit_feature_list' ),
+			'fields'            => array(),
+			'integration-class' => Feature_List_Module::class,
+		);
+
+		/** Jeg Kit - Tabs Widget */
+		$widgets['jkit_tabs'] = array(
+			'conditions'        => array( 'widgetType' => 'jkit_tabs' ),
+			'fields'            => array(),
+			'integration-class' => Tabs_Module::class,
 		);
 
 		/** Jeg Kit - Countdown Widget */
@@ -377,6 +393,8 @@ class WPML {
 		require_once JEG_ELEMENTOR_KIT_DIR . 'class/integrations/wpml/class-animated-text-module.php';
 		require_once JEG_ELEMENTOR_KIT_DIR . 'class/integrations/wpml/class-social-share-module.php';
 		require_once JEG_ELEMENTOR_KIT_DIR . 'class/integrations/wpml/class-client-logo-module.php';
+		require_once JEG_ELEMENTOR_KIT_DIR . 'class/integrations/wpml/class-feature-list-module.php';
+		require_once JEG_ELEMENTOR_KIT_DIR . 'class/integrations/wpml/class-tabs-module.php';
 	}
 
 	/**
