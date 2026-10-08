@@ -2,6 +2,10 @@
 
 This file preserves the complete changelog history that was previously kept in `readme.txt` before shortening the WordPress.org-facing `Changelog` section to stay under the 5,000-word limit.
 
+## 3.2.21 - 08-10-2026
+
+* Improvement: Added WPML compatibility for the Gallery widgets.
+
 ## 3.2.20 - 01-10-2026
 
 * Improvement: Security issues.

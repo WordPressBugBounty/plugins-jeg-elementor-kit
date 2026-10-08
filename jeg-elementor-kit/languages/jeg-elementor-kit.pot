@@ -7,7 +7,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language-Team: Jegtheme <support@jegtheme.com>\n"
-"POT-Creation-Date: 2026-10-01 09:28+0000\n"
+"POT-Creation-Date: 2026-10-08 13:21+0000\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -57,7 +57,7 @@ msgstr ""
 msgid "It is recommended that you backup your site before updating the plugin so rollback is possible whenever needed."
 msgstr ""
 
-#: jeg-elementor-kit/class/admin/class-api.php:481, jeg-elementor-kit/class/admin/class-api.php:3223
+#: jeg-elementor-kit/class/admin/class-api.php:481, jeg-elementor-kit/class/admin/class-api.php:3240
 msgid "You are not allowed to access this endpoint."
 msgstr ""
 
@@ -169,7 +169,7 @@ msgstr ""
 msgid "Failed to decode JSON data."
 msgstr ""
 
-#: jeg-elementor-kit/class/admin/class-api.php:3165
+#: jeg-elementor-kit/class/admin/class-api.php:3168
 msgid "Variant ID is required."
 msgstr ""
 
@@ -341,7 +341,7 @@ msgstr ""
 msgid "All Archives"
 msgstr ""
 
-#: jeg-elementor-kit/class/dashboard/class-dashboard.php:885, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:169, jeg-elementor-kit/class/elements/options/class-post-author-option.php:101, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:382
+#: jeg-elementor-kit/class/dashboard/class-dashboard.php:885, jeg-elementor-kit/class/dashboard/template/class-template-dashboard-abstract.php:169, jeg-elementor-kit/class/elements/options/class-post-author-option.php:101, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:386
 msgid "Author"
 msgstr ""
 
@@ -697,375 +697,391 @@ msgstr ""
 msgid "Box Shadow"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:65
+#: jeg-elementor-kit/class/integrations/class-wpml.php:66
 msgid "Jeg Kit Icon Box: Icon Box: Title"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:66
+#: jeg-elementor-kit/class/integrations/class-wpml.php:67
 msgid "Jeg Kit Icon Box: Icon Box: Description"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:67
+#: jeg-elementor-kit/class/integrations/class-wpml.php:68
 msgid "Jeg Kit Icon Box: Read More: Button Label"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:68
+#: jeg-elementor-kit/class/integrations/class-wpml.php:69
 msgid "Jeg Kit Icon Box: Badge: Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:76
+#: jeg-elementor-kit/class/integrations/class-wpml.php:77
 msgid "Jeg Kit Off Canvas: Setting: Open Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:84
+#: jeg-elementor-kit/class/integrations/class-wpml.php:85
 msgid "Jeg Kit Search: Search: Placeholder"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:85
+#: jeg-elementor-kit/class/integrations/class-wpml.php:86
 msgid "Jeg Kit Search: Search: Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:93
+#: jeg-elementor-kit/class/integrations/class-wpml.php:94
 msgid "Jeg Kit Nav Menu: Mobile Menu: Custom Link"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:101
+#: jeg-elementor-kit/class/integrations/class-wpml.php:102
 msgid "Jeg Kit Progress Bar: Progress Bar: Title"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:130
-msgid "Jeg Kit Countdown: Content: Day Label"
-msgstr ""
-
 #: jeg-elementor-kit/class/integrations/class-wpml.php:131
-msgid "Jeg Kit Countdown: Content: Hour Label"
+msgid "Jeg Kit Gallery: Filter: All Label"
 msgstr ""
 
 #: jeg-elementor-kit/class/integrations/class-wpml.php:132
-msgid "Jeg Kit Countdown: Content: Minute Label"
+msgid "Jeg Kit Gallery: Load More: Button Text"
 msgstr ""
 
 #: jeg-elementor-kit/class/integrations/class-wpml.php:133
-msgid "Jeg Kit Countdown: Content: Second Label"
+msgid "Jeg Kit Gallery: Load More: No More Text"
 msgstr ""
 
 #: jeg-elementor-kit/class/integrations/class-wpml.php:134
-msgid "Jeg Kit Countdown: Expired Action: Title"
+msgid "Jeg Kit Gallery: Search: Placeholder"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:135
-msgid "Jeg Kit Countdown: Expired Action: Content"
-msgstr ""
-
-#: jeg-elementor-kit/class/integrations/class-wpml.php:136
-msgid "Jeg Kit Countdown: Expired Action: Redirect Link"
+#: jeg-elementor-kit/class/integrations/class-wpml.php:143
+msgid "Jeg Kit Countdown: Content: Day Label"
 msgstr ""
 
 #: jeg-elementor-kit/class/integrations/class-wpml.php:144
-msgid "Jeg Kit Dual Button: Dual Button: Middle Text"
+msgid "Jeg Kit Countdown: Content: Hour Label"
 msgstr ""
 
 #: jeg-elementor-kit/class/integrations/class-wpml.php:145
-msgid "Jeg Kit Dual Button: Button One: Text"
+msgid "Jeg Kit Countdown: Content: Minute Label"
 msgstr ""
 
 #: jeg-elementor-kit/class/integrations/class-wpml.php:146
-msgid "Jeg Kit Dual Button: Button One: Link"
+msgid "Jeg Kit Countdown: Content: Second Label"
 msgstr ""
 
 #: jeg-elementor-kit/class/integrations/class-wpml.php:147
-msgid "Jeg Kit Dual Button: Button Two: Text"
+msgid "Jeg Kit Countdown: Expired Action: Title"
 msgstr ""
 
 #: jeg-elementor-kit/class/integrations/class-wpml.php:148
-msgid "Jeg Kit Dual Button: Button Two: Link"
+msgid "Jeg Kit Countdown: Expired Action: Content"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:156
-msgid "Jeg Kit Video Button: Video: Button Title"
+#: jeg-elementor-kit/class/integrations/class-wpml.php:149
+msgid "Jeg Kit Countdown: Expired Action: Redirect Link"
 msgstr ""
 
 #: jeg-elementor-kit/class/integrations/class-wpml.php:157
-msgid "Jeg Kit Video Button: Video: Video URL"
+msgid "Jeg Kit Dual Button: Dual Button: Middle Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:165
-msgid "Jeg Kit Mailchimp: Form: First Name Label"
+#: jeg-elementor-kit/class/integrations/class-wpml.php:158
+msgid "Jeg Kit Dual Button: Button One: Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:166
-msgid "Jeg Kit Mailchimp: Form: First Name Placeholder"
+#: jeg-elementor-kit/class/integrations/class-wpml.php:159
+msgid "Jeg Kit Dual Button: Button One: Link"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:167
-msgid "Jeg Kit Mailchimp: Form: Last Name Label"
+#: jeg-elementor-kit/class/integrations/class-wpml.php:160
+msgid "Jeg Kit Dual Button: Button Two: Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:168
-msgid "Jeg Kit Mailchimp: Form: Last Name Placeholder"
+#: jeg-elementor-kit/class/integrations/class-wpml.php:161
+msgid "Jeg Kit Dual Button: Button Two: Link"
 msgstr ""
 
 #: jeg-elementor-kit/class/integrations/class-wpml.php:169
-msgid "Jeg Kit Mailchimp: Form: Phone Label"
+msgid "Jeg Kit Video Button: Video: Button Title"
 msgstr ""
 
 #: jeg-elementor-kit/class/integrations/class-wpml.php:170
-msgid "Jeg Kit Mailchimp: Form: Phone Placeholder"
+msgid "Jeg Kit Video Button: Video: Video URL"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:171
-msgid "Jeg Kit Mailchimp: Form: Email Label"
+#: jeg-elementor-kit/class/integrations/class-wpml.php:178
+msgid "Jeg Kit Mailchimp: Form: First Name Label"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:172
-msgid "Jeg Kit Mailchimp: Form: Email Placeholder"
+#: jeg-elementor-kit/class/integrations/class-wpml.php:179
+msgid "Jeg Kit Mailchimp: Form: First Name Placeholder"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:173
-msgid "Jeg Kit Mailchimp: Form: Button Text"
+#: jeg-elementor-kit/class/integrations/class-wpml.php:180
+msgid "Jeg Kit Mailchimp: Form: Last Name Label"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:174
-msgid "Jeg Kit Mailchimp: Form: Success Message"
+#: jeg-elementor-kit/class/integrations/class-wpml.php:181
+msgid "Jeg Kit Mailchimp: Form: Last Name Placeholder"
 msgstr ""
 
 #: jeg-elementor-kit/class/integrations/class-wpml.php:182
-msgid "Jeg Kit Banner: Banner: Title"
+msgid "Jeg Kit Mailchimp: Form: Phone Label"
 msgstr ""
 
 #: jeg-elementor-kit/class/integrations/class-wpml.php:183
-msgid "Jeg Kit Banner: Banner: Subtitle"
+msgid "Jeg Kit Mailchimp: Form: Phone Placeholder"
 msgstr ""
 
 #: jeg-elementor-kit/class/integrations/class-wpml.php:184
-msgid "Jeg Kit Banner: Banner: Description"
+msgid "Jeg Kit Mailchimp: Form: Email Label"
 msgstr ""
 
 #: jeg-elementor-kit/class/integrations/class-wpml.php:185
-msgid "Jeg Kit Banner: Button: Text"
+msgid "Jeg Kit Mailchimp: Form: Email Placeholder"
 msgstr ""
 
 #: jeg-elementor-kit/class/integrations/class-wpml.php:186
-msgid "Jeg Kit Banner: Button: Link"
+msgid "Jeg Kit Mailchimp: Form: Button Text"
 msgstr ""
 
 #: jeg-elementor-kit/class/integrations/class-wpml.php:187
+msgid "Jeg Kit Mailchimp: Form: Success Message"
+msgstr ""
+
+#: jeg-elementor-kit/class/integrations/class-wpml.php:195
+msgid "Jeg Kit Banner: Banner: Title"
+msgstr ""
+
+#: jeg-elementor-kit/class/integrations/class-wpml.php:196
+msgid "Jeg Kit Banner: Banner: Subtitle"
+msgstr ""
+
+#: jeg-elementor-kit/class/integrations/class-wpml.php:197
+msgid "Jeg Kit Banner: Banner: Description"
+msgstr ""
+
+#: jeg-elementor-kit/class/integrations/class-wpml.php:198
+msgid "Jeg Kit Banner: Button: Text"
+msgstr ""
+
+#: jeg-elementor-kit/class/integrations/class-wpml.php:199
+msgid "Jeg Kit Banner: Button: Link"
+msgstr ""
+
+#: jeg-elementor-kit/class/integrations/class-wpml.php:200
 msgid "Jeg Kit Banner: Box Sale: Before Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:188
+#: jeg-elementor-kit/class/integrations/class-wpml.php:201
 msgid "Jeg Kit Banner: Box Sale: Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:189
+#: jeg-elementor-kit/class/integrations/class-wpml.php:202
 msgid "Jeg Kit Banner: Box Sale: Unit"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:225
+#: jeg-elementor-kit/class/integrations/class-wpml.php:238
 msgid "Jeg Kit Heading: Title: Before Focused Title"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:226
+#: jeg-elementor-kit/class/integrations/class-wpml.php:239
 msgid "Jeg Kit Heading: Title: Focused Title"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:227
+#: jeg-elementor-kit/class/integrations/class-wpml.php:240
 msgid "Jeg Kit Heading: Title: After Focused Title"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:228
+#: jeg-elementor-kit/class/integrations/class-wpml.php:241
 msgid "Jeg Kit Heading: Title: Highlight Title"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:229
+#: jeg-elementor-kit/class/integrations/class-wpml.php:242
 msgid "Jeg Kit Heading: Subtitle: Heading Sub Title"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:230
+#: jeg-elementor-kit/class/integrations/class-wpml.php:243
 msgid "Jeg Kit Heading: Description: Heading Description"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:231
+#: jeg-elementor-kit/class/integrations/class-wpml.php:244
 msgid "Jeg Kit Heading: Shadow Text: Content"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:239
+#: jeg-elementor-kit/class/integrations/class-wpml.php:252
 msgid "Jeg Kit Image Box: Image: Link"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:240
+#: jeg-elementor-kit/class/integrations/class-wpml.php:253
 msgid "Jeg Kit Image Box: Body: Title"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:241
+#: jeg-elementor-kit/class/integrations/class-wpml.php:254
 msgid "Jeg Kit Image Box: Body: Description"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:242
+#: jeg-elementor-kit/class/integrations/class-wpml.php:255
 msgid "Jeg Kit Image Box: Button: Label"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:243
+#: jeg-elementor-kit/class/integrations/class-wpml.php:256
 msgid "Jeg Kit Image Box: Button: Link"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:251
+#: jeg-elementor-kit/class/integrations/class-wpml.php:264
 msgid "Jeg Kit Button: Content: Label"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:252
+#: jeg-elementor-kit/class/integrations/class-wpml.php:265
 msgid "Jeg Kit Button: Content: Link"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:253
+#: jeg-elementor-kit/class/integrations/class-wpml.php:266
 msgid "Jeg Kit Button: Content: Class"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:254
+#: jeg-elementor-kit/class/integrations/class-wpml.php:267
 msgid "Jeg Kit Button: Content: ID"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:262
+#: jeg-elementor-kit/class/integrations/class-wpml.php:275
 msgid "Jeg Kit Animated Text: Text: Before Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:263
+#: jeg-elementor-kit/class/integrations/class-wpml.php:276
 msgid "Jeg Kit Animated Text: Text: Animated Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:264
+#: jeg-elementor-kit/class/integrations/class-wpml.php:277
 msgid "Jeg Kit Animated Text: Text: After Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:273
+#: jeg-elementor-kit/class/integrations/class-wpml.php:286
 msgid "Jeg Kit Pie Chart: Content: Title"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:274
+#: jeg-elementor-kit/class/integrations/class-wpml.php:287
 msgid "Jeg Kit Pie Chart: Content: Description"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:282
+#: jeg-elementor-kit/class/integrations/class-wpml.php:295
 msgid "Jeg Kit Fun Fact: Content: Number Prefix"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:283
+#: jeg-elementor-kit/class/integrations/class-wpml.php:296
 msgid "Jeg Kit Fun Fact: Content: Number"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:284
+#: jeg-elementor-kit/class/integrations/class-wpml.php:297
 msgid "Jeg Kit Fun Fact: Content: Number Suffix"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:285
+#: jeg-elementor-kit/class/integrations/class-wpml.php:298
 msgid "Jeg Kit Fun Fact: Content: Title"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:286
+#: jeg-elementor-kit/class/integrations/class-wpml.php:299
 msgid "Jeg Kit Fun Fact: Content: Super"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:294
+#: jeg-elementor-kit/class/integrations/class-wpml.php:307
 msgid "Jeg Kit Team: Team Member: Member Name"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:295
+#: jeg-elementor-kit/class/integrations/class-wpml.php:308
 msgid "Jeg Kit Team: Team Member: Position"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:296
+#: jeg-elementor-kit/class/integrations/class-wpml.php:309
 msgid "Jeg Kit Team: Team Member: Description"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:297
+#: jeg-elementor-kit/class/integrations/class-wpml.php:310
 msgid "Jeg Kit Team: Team Member: Phone"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:298
+#: jeg-elementor-kit/class/integrations/class-wpml.php:311
 msgid "Jeg Kit Team: Team Member: Email"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:306
+#: jeg-elementor-kit/class/integrations/class-wpml.php:319
 msgid "Jeg Kit Post Block: Content Setting: Excerpt More"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:307
+#: jeg-elementor-kit/class/integrations/class-wpml.php:320
 msgid "Jeg Kit Post Block: Content Setting: Read More Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:308
+#: jeg-elementor-kit/class/integrations/class-wpml.php:321
 msgid "Jeg Kit Post Block: Content Setting: Meta Author \"by\" Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:309
+#: jeg-elementor-kit/class/integrations/class-wpml.php:322
 msgid "Jeg Kit Post Block: Content Setting: Post Date Custom Format"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:310
+#: jeg-elementor-kit/class/integrations/class-wpml.php:323
 msgid "Jeg Kit Post Block: Pagination: Previous Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:311
+#: jeg-elementor-kit/class/integrations/class-wpml.php:324
 msgid "Jeg Kit Post Block: Pagination: Next Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:312
+#: jeg-elementor-kit/class/integrations/class-wpml.php:325
 msgid "Jeg Kit Post Block: Pagination: Load More Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:313
+#: jeg-elementor-kit/class/integrations/class-wpml.php:326
 msgid "Jeg Kit Post Block: Pagination: Loading Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:321
+#: jeg-elementor-kit/class/integrations/class-wpml.php:334
 msgid "Jeg Kit Post List: Content Setting: Post Date Custom Format"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:322
+#: jeg-elementor-kit/class/integrations/class-wpml.php:335
 msgid "Jeg Kit Post List: Pagination: Previous Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:323
+#: jeg-elementor-kit/class/integrations/class-wpml.php:336
 msgid "Jeg Kit Post List: Pagination: Next Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:324
+#: jeg-elementor-kit/class/integrations/class-wpml.php:337
 msgid "Jeg Kit Post List: Pagination: Load More Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:325
+#: jeg-elementor-kit/class/integrations/class-wpml.php:338
 msgid "Jeg Kit Post List: Pagination: Loading Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:326
+#: jeg-elementor-kit/class/integrations/class-wpml.php:339
 msgid "Jeg Kit Post List: No Content: Text"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:334
+#: jeg-elementor-kit/class/integrations/class-wpml.php:347
 msgid "Jeg Kit Post Date: Date: Custom Format"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:335
+#: jeg-elementor-kit/class/integrations/class-wpml.php:348
 msgid "Jeg Kit Post Date: Date: Custom Link"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:343
+#: jeg-elementor-kit/class/integrations/class-wpml.php:356
 msgid "Jeg Kit Post Author: Author: Custom Link"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:351
+#: jeg-elementor-kit/class/integrations/class-wpml.php:364
 msgid "Jeg Kit Post Title: Title: Custom Link"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:359
+#: jeg-elementor-kit/class/integrations/class-wpml.php:372
 msgid "Jeg Kit Post Featured Image: Image: Custom Link"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:367
+#: jeg-elementor-kit/class/integrations/class-wpml.php:380
 msgid "Jeg Kit Post Excerpt: Excerpt: Custom Link"
 msgstr ""
 
-#: jeg-elementor-kit/class/integrations/class-wpml.php:375
+#: jeg-elementor-kit/class/integrations/class-wpml.php:388
 msgid "Jeg Kit Post Terms: Terms: Separator"
 msgstr ""
 
@@ -1849,7 +1865,7 @@ msgstr ""
 msgid "Contain"
 msgstr ""
 
-#: jeg-elementor-kit/class/elements/options/class-banner-option.php:326, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:498
+#: jeg-elementor-kit/class/elements/options/class-banner-option.php:326, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:502
 msgid "Auto"
 msgstr ""
 
@@ -1989,7 +2005,7 @@ msgstr ""
 msgid "Content Setting"
 msgstr ""
 
-#: jeg-elementor-kit/class/elements/options/class-category-list-option.php:140, jeg-elementor-kit/class/elements/options/class-option-abstract.php:647, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:344
+#: jeg-elementor-kit/class/elements/options/class-category-list-option.php:140, jeg-elementor-kit/class/elements/options/class-option-abstract.php:647, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:348
 msgid "Include Category"
 msgstr ""
 
@@ -2005,7 +2021,7 @@ msgstr ""
 msgid "Limit number of category on this module."
 msgstr ""
 
-#: jeg-elementor-kit/class/elements/options/class-category-list-option.php:168, jeg-elementor-kit/class/elements/options/class-product-categories-option.php:345, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:433
+#: jeg-elementor-kit/class/elements/options/class-category-list-option.php:168, jeg-elementor-kit/class/elements/options/class-product-categories-option.php:345, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:437
 msgid "Sort by"
 msgstr ""
 
@@ -2021,11 +2037,11 @@ msgstr ""
 msgid "Oldest"
 msgstr ""
 
-#: jeg-elementor-kit/class/elements/options/class-category-list-option.php:175, jeg-elementor-kit/class/elements/options/class-option-woocommerce-abstract.php:181, jeg-elementor-kit/class/elements/options/class-product-categories-option.php:352, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:440
+#: jeg-elementor-kit/class/elements/options/class-category-list-option.php:175, jeg-elementor-kit/class/elements/options/class-option-woocommerce-abstract.php:181, jeg-elementor-kit/class/elements/options/class-product-categories-option.php:352, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:444
 msgid "Alphabet Asc"
 msgstr ""
 
-#: jeg-elementor-kit/class/elements/options/class-category-list-option.php:176, jeg-elementor-kit/class/elements/options/class-option-woocommerce-abstract.php:182, jeg-elementor-kit/class/elements/options/class-product-categories-option.php:353, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:441
+#: jeg-elementor-kit/class/elements/options/class-category-list-option.php:176, jeg-elementor-kit/class/elements/options/class-option-woocommerce-abstract.php:182, jeg-elementor-kit/class/elements/options/class-product-categories-option.php:353, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:445
 msgid "Alphabet Desc"
 msgstr ""
 
@@ -3361,7 +3377,7 @@ msgstr ""
 msgid "Equal Height"
 msgstr ""
 
-#: jeg-elementor-kit/class/elements/options/class-icon-box-option.php:261, jeg-elementor-kit/class/elements/options/class-image-box-option.php:177, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:296
+#: jeg-elementor-kit/class/elements/options/class-icon-box-option.php:261, jeg-elementor-kit/class/elements/options/class-image-box-option.php:177, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:300
 msgid "Disable"
 msgstr ""
 
@@ -3953,7 +3969,7 @@ msgstr ""
 msgid "Jeg Kit - Elements"
 msgstr ""
 
-#: jeg-elementor-kit/class/elements/options/class-option-abstract.php:114, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:570
+#: jeg-elementor-kit/class/elements/options/class-option-abstract.php:114, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:574
 msgid "CSS Box"
 msgstr ""
 
@@ -4077,48 +4093,48 @@ msgstr ""
 msgid "Post Tag"
 msgstr ""
 
-#: jeg-elementor-kit/class/elements/options/class-option-abstract.php:606, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:237
+#: jeg-elementor-kit/class/elements/options/class-option-abstract.php:606, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:241
 msgid "Include Post Type"
 msgstr ""
 
-#: jeg-elementor-kit/class/elements/options/class-option-abstract.php:607, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:238
+#: jeg-elementor-kit/class/elements/options/class-option-abstract.php:607, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:242
 msgid "Choose post type for this content."
 msgstr ""
 
-#: jeg-elementor-kit/class/elements/options/class-option-abstract.php:627, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:314
+#: jeg-elementor-kit/class/elements/options/class-option-abstract.php:627, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:318
 msgid "Include Post ID"
 msgstr ""
 
-#: jeg-elementor-kit/class/elements/options/class-option-abstract.php:628, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:315, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:330
+#: jeg-elementor-kit/class/elements/options/class-option-abstract.php:628, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:319, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:334
 msgid "Tips :<br/> - You can search post id by inputing title, clicking search title, and you will have your post id.<br/>- You can also directly insert your post id, and click enter to add it on the list."
 msgstr ""
 
-#: jeg-elementor-kit/class/elements/options/class-option-abstract.php:648, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:345
+#: jeg-elementor-kit/class/elements/options/class-option-abstract.php:648, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:349
 msgid "Choose which category you want to show on this module."
 msgstr ""
 
-#: jeg-elementor-kit/class/elements/options/class-option-abstract.php:672, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:363
+#: jeg-elementor-kit/class/elements/options/class-option-abstract.php:672, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:367
 msgid "Exclude Category"
 msgstr ""
 
-#: jeg-elementor-kit/class/elements/options/class-option-abstract.php:673, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:364
+#: jeg-elementor-kit/class/elements/options/class-option-abstract.php:673, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:368
 msgid "Choose excluded category for this module."
 msgstr ""
 
-#: jeg-elementor-kit/class/elements/options/class-option-abstract.php:739, jeg-elementor-kit/class/elements/options/class-option-woocommerce-abstract.php:151, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:397
+#: jeg-elementor-kit/class/elements/options/class-option-abstract.php:739, jeg-elementor-kit/class/elements/options/class-option-woocommerce-abstract.php:151, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:401
 msgid "Include Tags"
 msgstr ""
 
-#: jeg-elementor-kit/class/elements/options/class-option-abstract.php:740, jeg-elementor-kit/class/elements/options/class-option-abstract.php:765, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:398, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:417
+#: jeg-elementor-kit/class/elements/options/class-option-abstract.php:740, jeg-elementor-kit/class/elements/options/class-option-abstract.php:765, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:402, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:421
 msgid "Write to search post tag."
 msgstr ""
 
-#: jeg-elementor-kit/class/elements/options/class-option-abstract.php:764, jeg-elementor-kit/class/elements/options/class-option-woocommerce-abstract.php:165, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:416
+#: jeg-elementor-kit/class/elements/options/class-option-abstract.php:764, jeg-elementor-kit/class/elements/options/class-option-woocommerce-abstract.php:165, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:420
 msgid "Exclude Tags"
 msgstr ""
 
 #. translators: %s: taxonomy name
-#: jeg-elementor-kit/class/elements/options/class-option-abstract.php:838, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:465
+#: jeg-elementor-kit/class/elements/options/class-option-abstract.php:838, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:469
 msgid "Write to search the %s that you want to include as filter."
 msgstr ""
 
@@ -4895,7 +4911,7 @@ msgstr ""
 msgid "Carousel Setting"
 msgstr ""
 
-#: jeg-elementor-kit/class/elements/options/class-product-carousel-option.php:101, jeg-elementor-kit/class/elements/options/class-product-categories-option.php:96, jeg-elementor-kit/class/elements/options/class-product-grid-option.php:88, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:197
+#: jeg-elementor-kit/class/elements/options/class-product-carousel-option.php:101, jeg-elementor-kit/class/elements/options/class-product-categories-option.php:96, jeg-elementor-kit/class/elements/options/class-product-grid-option.php:88, jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:201
 msgid "Content Filter"
 msgstr ""
 
@@ -5872,6 +5888,30 @@ msgstr ""
 msgid "Jeg Kit Feature List: Feature Item: Link"
 msgstr ""
 
+#: jeg-elementor-kit/class/integrations/wpml/class-gallery-module.php:52
+msgid "Jeg Kit Gallery: Gallery Item: Link"
+msgstr ""
+
+#: jeg-elementor-kit/class/integrations/wpml/class-gallery-module.php:54
+msgid "Jeg Kit Gallery: Gallery Item: Control Name"
+msgstr ""
+
+#: jeg-elementor-kit/class/integrations/wpml/class-gallery-module.php:56
+msgid "Jeg Kit Gallery: Gallery Item: Item Name"
+msgstr ""
+
+#: jeg-elementor-kit/class/integrations/wpml/class-gallery-module.php:58
+msgid "Jeg Kit Gallery: Gallery Item: Price"
+msgstr ""
+
+#: jeg-elementor-kit/class/integrations/wpml/class-gallery-module.php:60
+msgid "Jeg Kit Gallery: Gallery Item: Category"
+msgstr ""
+
+#: jeg-elementor-kit/class/integrations/wpml/class-gallery-module.php:62
+msgid "Jeg Kit Gallery: Gallery Item: Content"
+msgstr ""
+
 #: jeg-elementor-kit/class/integrations/wpml/class-portfolio-gallery-module.php:44
 msgid "Jeg Kit Portfolio Gallery: Gallery: Title"
 msgstr ""
@@ -6211,177 +6251,177 @@ msgstr ""
 msgid "No"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:172
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:176
 msgid "Compatible Column: "
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:173, jeg-elementor-kit/lib/jeg-element/includes/class/widget/class-widget-abstract.php:69
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:177, jeg-elementor-kit/lib/jeg-element/includes/class/widget/class-widget-abstract.php:69
 msgid "Please check style / design tab to change Module / Block width and make it fit with your current column width"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:250
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:254
 msgid "Number of Post"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:251
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:255
 msgid "Show number of post on this module."
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:265
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:269
 msgid "Number of post"
 msgstr ""
 
 #. translators: 1: Number of element
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:267
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:271
 msgid "This module will require you to choose %s number of post."
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:275
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:279
 msgid "Post Offset"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:276
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:280
 msgid "Number of post offset (start of content)."
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:291
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:295
 msgid "Include into Unique Content Group"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:292
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:296
 msgid "Choose unique content option, and this module will be included into unique content group. It won't duplicate content across the group. Ajax loaded content won't affect this unique content feature."
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:297
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:301
 msgid "Unique Content - Group 1"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:298
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:302
 msgid "Unique Content - Group 2"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:299
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:303
 msgid "Unique Content - Group 3"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:300
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:304
 msgid "Unique Content - Group 4"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:301
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:305
 msgid "Unique Content - Group 5"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:329
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:333
 msgid "Exclude Post ID"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:383
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:387
 msgid "Write to search post author."
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:434
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:438
 msgid "Sort post by this option<br/>* <strong>Jetpack :</strong> Need <strong>Jetpack</strong> plugin & Stat module enabled.<br/>"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:438
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:442
 msgid "Latest Post"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:439
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:443
 msgid "Oldest Post"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:442
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:446
 msgid "Random Post"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:443
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:447
 msgid "Random Post (7 Days)"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:444
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:448
 msgid "Random Post (30 Days)"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:445
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:449
 msgid "Most Comment"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:446
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:450
 msgid "Popular Post (1 Day - Jetpack)"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:447
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:451
 msgid "Popular Post (7 Days - Jetpack)"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:448
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:452
 msgid "Popular Post (30 Days - Jetpack)"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:449
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:453
 msgid "Popular Post (All Time - Jetpack)"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:488
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:492
 msgid "Design"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:505
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:509
 msgid "4 Column Design ( 1 Block )"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:514
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:518
 msgid "8 Column Design ( 2 Block )"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:523
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:527
 msgid "12 Column Design ( 3 Block )"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:530
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:534
 msgid "Element ID"
 msgstr ""
 
 #. translators: 1: URL of direction
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:532
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:536
 msgid "Enter element ID (Note: make sure it is unique and valid according to <a href=\"%s\">w3c specification</a>)."
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:538
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:542
 msgid "Extra class name"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:539
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:543
 msgid "Style particular content element differently - add a class name and refer to it in custom CSS."
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:546
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:550
 msgid "Element Color Scheme"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:547
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:551
 msgid "Choose element color scheme for your element."
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:551
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:555
 msgid "Light"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:552
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:556
 msgid "Dark"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:559
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:563
 msgid "Block / Column Width"
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:560
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:564
 msgid "Please choose width of column you want to use on this block. 1 Block represents 4 columns."
 msgstr ""
 
-#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:597
+#: jeg-elementor-kit/lib/jeg-element/includes/class/elements/class-elements-option-abstract.php:601
 msgid "JEG - Element"
 msgstr ""
 

@@ -11,6 +11,7 @@ use Jeg\Elementor_Kit\Integrations\WPML\Accordion_Module;
 use Jeg\Elementor_Kit\Integrations\WPML\Animated_Text_Module;
 use Jeg\Elementor_Kit\Integrations\WPML\Client_Logo_Module;
 use Jeg\Elementor_Kit\Integrations\WPML\Feature_List_Module;
+use Jeg\Elementor_Kit\Integrations\WPML\Gallery_Module;
 use Jeg\Elementor_Kit\Integrations\WPML\Portfolio_Gallery_Module;
 use Jeg\Elementor_Kit\Integrations\WPML\Social_Share_Module;
 use Jeg\Elementor_Kit\Integrations\WPML\Tabs_Module;
@@ -121,6 +122,18 @@ class WPML {
 			'conditions'        => array( 'widgetType' => 'jkit_tabs' ),
 			'fields'            => array(),
 			'integration-class' => Tabs_Module::class,
+		);
+
+		/** Jeg Kit - Gallery Widget */
+		$widgets['jkit_gallery'] = array(
+			'conditions'        => array( 'widgetType' => 'jkit_gallery' ),
+			'fields'            => array(
+				$this->field( 'sg_filter_all_label', __( 'Jeg Kit Gallery: Filter: All Label', 'jeg-elementor-kit' ) ),
+				$this->field( 'sg_loadmore_button_text', __( 'Jeg Kit Gallery: Load More: Button Text', 'jeg-elementor-kit' ) ),
+				$this->field( 'sg_loadmore_nomore_text', __( 'Jeg Kit Gallery: Load More: No More Text', 'jeg-elementor-kit' ) ),
+				$this->field( 'st_search_form_placeholder', __( 'Jeg Kit Gallery: Search: Placeholder', 'jeg-elementor-kit' ) ),
+			),
+			'integration-class' => Gallery_Module::class,
 		);
 
 		/** Jeg Kit - Countdown Widget */
@@ -395,6 +408,7 @@ class WPML {
 		require_once JEG_ELEMENTOR_KIT_DIR . 'class/integrations/wpml/class-client-logo-module.php';
 		require_once JEG_ELEMENTOR_KIT_DIR . 'class/integrations/wpml/class-feature-list-module.php';
 		require_once JEG_ELEMENTOR_KIT_DIR . 'class/integrations/wpml/class-tabs-module.php';
+		require_once JEG_ELEMENTOR_KIT_DIR . 'class/integrations/wpml/class-gallery-module.php';
 	}
 
 	/**
