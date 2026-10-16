@@ -15,6 +15,7 @@ use Jeg\Elementor_Kit\Integrations\WPML\Gallery_Module;
 use Jeg\Elementor_Kit\Integrations\WPML\Portfolio_Gallery_Module;
 use Jeg\Elementor_Kit\Integrations\WPML\Social_Share_Module;
 use Jeg\Elementor_Kit\Integrations\WPML\Tabs_Module;
+use Jeg\Elementor_Kit\Integrations\WPML\Team_Module;
 use Jeg\Elementor_Kit\Integrations\WPML\Testimonials_Module;
 
 /**
@@ -302,14 +303,15 @@ class WPML {
 
 		/** Jeg Kit - Team Widget */
 		$widgets['jkit_team'] = array(
-			'conditions' => array( 'widgetType' => 'jkit_team' ),
-			'fields'     => array(
+			'conditions'        => array( 'widgetType' => 'jkit_team' ),
+			'fields'            => array(
 				$this->field( 'sg_member_name', __( 'Jeg Kit Team: Team Member: Member Name', 'jeg-elementor-kit' ) ),
 				$this->field( 'sg_member_position', __( 'Jeg Kit Team: Team Member: Position', 'jeg-elementor-kit' ) ),
 				$this->field( 'sg_member_description', __( 'Jeg Kit Team: Team Member: Description', 'jeg-elementor-kit' ), 'AREA' ),
 				$this->field( 'sg_popup_phone', __( 'Jeg Kit Team: Team Member: Phone', 'jeg-elementor-kit' ) ),
 				$this->field( 'sg_popup_email', __( 'Jeg Kit Team: Team Member: Email', 'jeg-elementor-kit' ) ),
 			),
+			'integration-class' => Team_Module::class,
 		);
 
 		/** Jeg Kit - Post Block Widget */
@@ -409,6 +411,7 @@ class WPML {
 		require_once JEG_ELEMENTOR_KIT_DIR . 'class/integrations/wpml/class-feature-list-module.php';
 		require_once JEG_ELEMENTOR_KIT_DIR . 'class/integrations/wpml/class-tabs-module.php';
 		require_once JEG_ELEMENTOR_KIT_DIR . 'class/integrations/wpml/class-gallery-module.php';
+		require_once JEG_ELEMENTOR_KIT_DIR . 'class/integrations/wpml/class-team-module.php';
 	}
 
 	/**
