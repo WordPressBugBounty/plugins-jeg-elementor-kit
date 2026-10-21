@@ -2,6 +2,12 @@
 
 This file preserves the complete changelog history that was previously kept in `readme.txt` before shortening the WordPress.org-facing `Changelog` section to stay under the 5,000-word limit.
 
+## 3.2.23 - 21-10-2026
+
+* Improvement: Added WPML compatibility for the Icon Box widget.
+* Fix: Plugin update notice not displaying correctly.
+* Fix: PHP Deprecated warning on strpos when passing null
+
 ## 3.2.22 - 17-10-2026
 
 * Improvement: Added WPML compatibility for the Team widget.

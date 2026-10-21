@@ -4,7 +4,7 @@ Tags: elementor, elements, addons, widgets, templates
 Requires at least: 5.0
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 3.2.22
+Stable tag: 3.2.23
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -203,6 +203,11 @@ Visit **[https://jegkit.com/](https://jegkit.com/)** for live demos, tutorials, 
 This major release introduces Mega Menu Builder, 114 demo templates, and a redesigned dashboard. Update now to explore new features and improved performance.
 
 == Changelog ==
+
+= 3.2.23 - 21-10-2026 =
+* Improvement: Added WPML compatibility for the Icon Box widget.
+* Fix: Plugin update notice not displaying correctly.
+* Fix: PHP Deprecated warning on strpos when passing null
 
 = 3.2.22 - 17-10-2026 =
 * Improvement: Added WPML compatibility for the Team widget.

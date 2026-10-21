@@ -67,6 +67,7 @@ class WPML {
 				$this->field( 'sg_icon_text', __( 'Jeg Kit Icon Box: Icon Box: Title', 'jeg-elementor-kit' ) ),
 				$this->field( 'sg_icon_description', __( 'Jeg Kit Icon Box: Icon Box: Description', 'jeg-elementor-kit' ), 'AREA' ),
 				$this->field( 'sg_readmore_button_label', __( 'Jeg Kit Icon Box: Read More: Button Label', 'jeg-elementor-kit' ) ),
+				'sg_readmore_globallink' => $this->field( 'url', __( 'Jeg Kit Icon Box: Read More: Link', 'jeg-elementor-kit' ), 'LINK' ),
 				$this->field( 'sg_badge_text', __( 'Jeg Kit Icon Box: Badge: Text', 'jeg-elementor-kit' ) ),
 			),
 		);
